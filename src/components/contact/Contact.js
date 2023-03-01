@@ -85,7 +85,7 @@ function Contact() {
 
         <div className="right">
           <div className='image-wrapper'>
-            <iframe className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64393.90416583071!2d10.13868373038761!3d36.810314227677154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd347621688e13%3A0x4377d30c058ed4d3!2sRue%20Des%20Djerbiens%2C%20Tunis!5e0!3m2!1sfr!2stn!4v1677325752990!5m2!1sfr!2stn" style={{ border: "0" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title='map' className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64393.90416583071!2d10.13868373038761!3d36.810314227677154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd347621688e13%3A0x4377d30c058ed4d3!2sRue%20Des%20Djerbiens%2C%20Tunis!5e0!3m2!1sfr!2stn!4v1677325752990!5m2!1sfr!2stn" style={{ border: "0" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div className="wave-wrap">
 
