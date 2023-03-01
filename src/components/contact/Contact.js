@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion'
-import image from '../../assets/web.jpg'
 import './contact.css'
 
 function Contact() {
@@ -46,22 +45,22 @@ function Contact() {
               <div className={!focus1 ? "input-wrap" : "input-wrap focus"}>
                 <input onKeyUp={Firstname} className='contact-input' onFocus={toggle1} onBlur={toggle1} autocomplete="off" name="First
                   Name" type="text" required />
-                <label className={fname != '' ? "not-empty" : null} >First Name</label>
+                <label className={fname !== '' ? "not-empty" : null} >First Name</label>
               </div>
               <div className={!focus2 ? "input-wrap" : "input-wrap focus"}>
                 <input className='contact-input' onKeyUp={Lastname} onFocus={toggle2} onBlur={toggle2} autocomplete="off" name="Last 
                 Name" type="text" required />
-                <label className={lname != '' ? "not-empty" : null}>last Name</label>
+                <label className={lname !== '' ? "not-empty" : null}>last Name</label>
               </div>
               <div className={!focus3 ? "input-wrap w-100" : "input-wrap w-100 focus"}>
                 <input className='contact-input' onKeyUp={Email} onFocus={toggle3} onBlur={toggle3} autocomplete="off" name="Email"
                   type="email" required />
-                <label className={email != '' ? "not-empty" : null}>Email</label>
+                <label className={email !== '' ? "not-empty" : null}>Email</label>
               </div>
               <div className={!focus4 ? "input-wrap textarea w-100" : "input-wrap textarea w-100 focus"}>
                 <textarea onFocus={toggle4} onKeyUp={Message} onBlur={toggle4} className='contact-input' name="Message" auto-complete="off"
                   required></textarea>
-                <label className={message != '' ? "not-empty" : null}>Message</label>
+                <label className={message !== '' ? "not-empty" : null}>Message</label>
               </div>
               <div className='contact-buttons'>
                 <button className='btn upload'>

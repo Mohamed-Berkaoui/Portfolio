@@ -8,7 +8,7 @@ function HomeText() {
     
     const el = useRef(null)
     useEffect(() => {
-      var typed = new Typed(el.current, {
+       new Typed(el.current, {
         strings: ["WEB DEVELOPER.^800", "WEB DESIGNER.^800", "GRAPHIC DESIGNER.^800", "FULLSTACK DEVELOPER.^1700"],
         backDelay: 10,
         startDelay: 800,
