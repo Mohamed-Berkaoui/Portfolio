@@ -1,0 +1,147 @@
+.overlay {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+background-color: var(--backcolor2);
+  display: flex;
+  overflow: hidden;
+  perspective: 1000px;
+
+  
+}
+[data-ison="true"] .overlay {
+
+  background-color: var(--backcolor1);
+
+}
+.hometext{
+font-size: 18px;
+  position: absolute;
+  top: 30%;
+  left:6%;
+  width: max-content;
+  }
+  .tiltcard{
+  position: relative;
+      left:64%;
+      width: max-content;
+      height: max-content;
+    }
+  .contactbutton{ 
+    position: relative;
+    top:65vh;
+    left:20%;
+
+  }
+
+.wavyanimation{
+  position: absolute;
+  display: flex;
+  width: 100%;
+height: 100%;
+
+transition: all 0.3s ease-in ;
+
+
+}
+
+.wavyanimation .wave{
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(3, 25, 43, 0.452);
+transition: all 0.5s ease;
+
+}
+[data-ison="true"]  .wavyanimation .wave{
+background: rgba(0, 0, 0, 0.514);
+
+}
+.wavyanimation .wave::before,
+.wavyanimation .wave::after{
+content: '';
+position: absolute;
+width: 250%;
+height: 400%;
+top: -25%;
+left: -200%;
+transform: translate(-50%,75%);
+
+}
+.wavyanimation .wave::before{
+border-radius: 45%;
+background:rgba(211, 211, 211, 0.408);
+animation: waves 15s linear infinite;
+}
+[data-ison="true"] .wavyanimation .wave::before{
+background: rgba(43, 51, 59, 0.4);
+
+}
+
+
+.wavyanimation .wave::after{
+border-radius:220%;
+background: var(--backcolor2);
+animation: waves 15s linear infinite;
+
+}
+[data-ison="true"] .wavyanimation .wave::after{
+background: var(--backcolor1);
+
+}
+@keyframes waves{
+0%{
+  transform: translate(50%, -75%) rotate(-20deg);
+}
+50%{
+  transform: translate(50%, -75%) rotate(20deg);
+}
+100%{
+  transform: translate(50%, -75%) rotate(-20deg);
+}
+}
+@media screen and (max-width: 1100px) {
+  .hometext{
+font-size: 14px;
+    position: absolute;
+    top: 15%;
+    width: max-content;
+    }
+    .tiltcard{
+      position: absolute;
+      left: 40%;
+          top: 12%;
+      
+      }
+      .contactbutton{ 
+        position: absolute;
+        top:32%;
+        left:75%;}
+
+
+}
+@media screen and (max-width: 850px){
+  .tiltcard{
+display: none;    left: 30%;
+        top: 20%;
+    
+    }
+    .contactbutton{ 
+   
+      position: absolute;
+      top:70%;
+      left:36vw;}
+      .hometexc:\Users\Suisse\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.htmlt{
+display: flex;
+justify-content: center;        position: absolute;
+        top: 25%;
+       width: 90%;
+        font-size: 12px;
+        }
+
+}
+@media screen and (max-height:){.tiltcard{
+  display: none;   
+      
+      }}

@@ -1,0 +1,75 @@
+.hero {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   position: fixed;
+   top: 0;
+   left: 0;
+   transition: all 0.1s ease;
+   z-index: 10;}
+
+  
+  
+
+.aboutheadertext{
+  
+    
+  font-size:5vw; 
+  font-weight: 500;
+  top: 28vh;  
+  
+  }
+  .aboutheadertext h2{
+   color: transparent;
+   -webkit-text-stroke-color: rgba(0, 0, 0, 0.616);
+  -webkit-text-stroke-width:2px ;
+  }
+  
+  
+
+
+
+  
+
+
+    .hero svg{
+        display: flex;
+        position: sticky;
+        width: 80%;
+      top: 10%;
+      height: 70%;
+      }
+  
+
+  
+  .blur-mask {
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translateZ(0);
+    z-index: 5;
+    transition: all 0.1s ease;
+   background-color: rgba(240, 248, 255, 0.11);
+  }
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+   #scrolldown{
+    position: absolute;
+    left: 0%;
+    top:70%;
+    width: 50%;
+   }

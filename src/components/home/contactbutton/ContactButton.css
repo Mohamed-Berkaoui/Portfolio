@@ -1,0 +1,87 @@
+
+    
+    
+      .bottoncontact{
+        cursor: pointer;
+        position: relative;
+        display: flex;
+      width: 150px;
+      height: 45px;
+      
+       
+    align-items: center; 
+    justify-content: center;
+    z-index: 10;
+    overflow: hidden; 
+    box-shadow: 1px 1px 4px black ;
+    transition: all 0.3s ease-in ;
+    
+    }
+    .bottoncontact span{
+      font-size: 0.8rem;
+      letter-spacing: 1.5px;
+      font-weight: 700;
+      z-index: 11;
+    }
+    
+   
+    .bottoncontact .liquid{
+      position: absolute;
+     left: 0;
+     top: 0;
+      width: 150px;
+      height: 150px;
+      background: #0c0c0c42;
+      box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+      transition: 0.5s;
+    
+    }
+ 
+    .bottoncontact .liquid::before,
+    .bottoncontact .liquid::after{
+      content: '';
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      top: -36%;
+      left: -150%;
+      transform: translate(-50%,75%);
+    }
+    .bottoncontact .liquid::before{
+      border-radius: 45%;
+      background: var(--backcolor1);
+      animation: bottonanim 10s linear infinite;
+    }
+   [data-ison="true"] .bottoncontact .liquid::before{
+      background:rgba(59, 52, 52, 0.61);
+    
+    }
+    
+    
+    .bottoncontact .liquid::after{
+      border-radius: 38%;
+      background:rgba(204, 203, 203, 0.5);
+      animation: bottonanim 10s linear infinite;
+    
+    }
+    [data-ison="true"] .bottoncontact .liquid::after{
+      background: rgba(119, 103, 103, 0.295);
+    
+    }
+    @keyframes bottonanim{
+      0%{
+        transform: translate(50%, -75%) rotate(0deg);
+      }
+      100%{
+        transform: translate(50%, -75%) rotate(360deg);
+      }
+    
+    }
+    .bottoncontact:hover{
+      box-shadow: 5px 5px 20px  black;
+      transform: scale(1.1);
+    
+    }
+    .bottoncontact:hover .liquid{
+      top: -70px;
+    }

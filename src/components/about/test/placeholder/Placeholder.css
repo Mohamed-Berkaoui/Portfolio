@@ -1,0 +1,26 @@
+.herop {
+    width: 100vw;
+    height: 100vh;
+position: absolute;
+    object-fit: cover;
+    background-color: beige;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   top: 0;
+   transition: all 0.1s ease;
+   z-index: 100000000000000000;}
+   .herop svg{
+    left: -100%;
+    display: flex;
+    position: sticky;
+    width: 80%;
+  top: 10%;
+  height: 70%;
+  }
+  .herop img {
+  width: auto;
+  height: 100%;
+
+}

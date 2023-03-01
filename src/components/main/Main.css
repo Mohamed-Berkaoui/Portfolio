@@ -1,0 +1,146 @@
+
+.container {
+  width: 100%;
+  
+  background-image: linear-gradient(135deg, #4d6683 0%, #a8a8a8 74%);
+  position: relative;
+  
+}
+.container[data-ison="true"] {
+  
+
+  background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+}
+.container.active{
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main {
+  position: relative;
+  width: 100vw;
+  left: 0;
+  z-index: 5;
+  transform-origin: left;
+  background-color: var(--textcolor2);
+  height: 100vh;
+  transition: 0.8s; transform-style: preserve-3d;
+    transform: perspective(1000px);
+}
+
+/*i put the css of .page and .overlay here because every component contains those tow divs .and i need them in every component to give a nice transition between  pages  */
+.page {
+  width: 100vw;
+  transform-style: preserve-3d;
+  transform: perspective(1000px);
+position: relative;
+
+    z-index: 10;
+ 
+
+  color: var(--textcolor2);
+
+
+}
+
+.page[data-ison="true"] {
+  background-color: rgba(255, 255, 255, 0.185);
+  color: var(--textcolor1);
+
+
+}
+.container.active .bar {
+  transform: rotate(360deg);
+  background-color: transparent;
+}
+.container.active .bar:before {
+  transform: translateY(0) rotate(45deg);
+}
+.container.active .bar:after {
+  transform: translateY(0) rotate(-45deg);
+}
+.container.active .main {
+  animation: main-animation 0.8s ease;
+  cursor: pointer;
+  transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+}
+
+@keyframes main-animation {
+  from {
+    transform: translate(0);
+  }
+
+  to {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+}
+
+
+.shadow {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transform-origin: left;
+  transition: 0.8s;
+  background-color: white;
+}
+
+.shadow.one {
+  z-index: 2;
+  opacity: 0.15;
+}
+
+.shadow.two {
+  z-index: 1;
+  opacity: 0.1;
+}
+
+.container.active .shadow.one {
+  animation: shadow-one 0.9s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+}
+
+@keyframes shadow-one {
+  0% {
+    transform: translate(0);
+  }
+
+  5% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+  }
+}
+
+.container.active .shadow.two {
+  animation: shadow-two 0.9s ease-out;
+  transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+}
+
+@keyframes shadow-two {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+
+  100% {
+    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+  }
+}
+
+.container.active .main:hover + .shadow.one {
+  transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
+}
+
+.container.active .main:hover {
+  transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+}
+
