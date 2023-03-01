@@ -2,8 +2,6 @@ import './Tesst.css'
 
 
 import{motion, useScroll, useTransform} from 'framer-motion'
-import { useRef } from 'react'
-import Third from '../third/Third';
 
 function Tesst() {
 

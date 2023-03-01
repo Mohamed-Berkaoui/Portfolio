@@ -17,6 +17,7 @@ function Second() {
   })
   const scale = useTransform(scrollYProgress, [0.8, 1], [1, 0.6]);
   const opacity = useTransform(scrollYProgress, [0.76, 1], [1, 0.5])
+
   const x = useTransform(scrollYProgress, [0.27, 0.7], ['50%', '-150%'])
 
   const whatido1 = useTransform(scrollYProgress, [0.229,0.23], [ -100,0])
@@ -37,7 +38,7 @@ function Second() {
     <div ref={carouselRef}  className='second-about'>
       <motion.div style={{ height: "300vh", background: "black" }}>
         <div style={{ top: '0%', position: "sticky" }}>
-          <motion.div style={{ scale: scale, opacity: opacity, }} className='backgroundsecond'>
+          <motion.div style={{ scale: scale, opacity: opacity }} className='backgroundsecond'>
          
 
             <div className='leftslide'>
@@ -54,12 +55,12 @@ function Second() {
                 Build client-side applications with modern features like SPA and maintain semantic coding style among other best practices for SEO optimisation. Use modern tech such as reactJS, TailwindCSS...
              </p> 
              </motion.div>
-              <motion.div style={{ x: x,opacity:scale2,scale:scale2,opacity:blur2 }} className='slider slider2'>
+              <motion.div style={{ x: x,scale:scale2,opacity:blur2 }} className='slider slider2'>
                 <h1>BACKEND APPS</h1>
                 <p>
                 Build scalable and maintainable server applications using cutting-edge technologies such as Nest.js, Docker, and MongoDB
              </p> </motion.div>
-              <motion.div style={{ x: x,opacity:scale3 ,scale:scale3,opacity:blur3}} className='slider slider3'>
+              <motion.div style={{ x: x,scale:scale3,opacity:blur3}} className='slider slider3'>
                 <h1>
                 NATIVE APPS
                 </h1>

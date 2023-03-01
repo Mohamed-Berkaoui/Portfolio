@@ -31,9 +31,7 @@ transition: all 0.01s linear;
 }
 
 
-#headertext{
 
-   }
  #h1{
     color :rgb(255, 255, 255);font-size: 1.7rem;  position: absolute;
         z-index: 500000000;
@@ -147,7 +145,6 @@ padding: 0% 5%;
     color: black;
     display: flex;
     width: 100vw;
-    align-items: flex-end;
     font-size: 1.5rem;
     background: linear-gradient(to top, #8a8a8a, #ffffffef);    
     flex-wrap: wrap;
@@ -160,7 +157,6 @@ width:50%;
 z-index: 0;
 transition: all 0.1s linear;
 display: flex;
-justify-content: end;
 }
 .info2 img{
     transition: all 2s ease-out;

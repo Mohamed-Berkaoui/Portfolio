@@ -1,27 +1,9 @@
 import './Placeholder.css'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
-function Placeholder() {
+import { motion } from 'framer-motion'
+ function Placeholder() {
 
-    
-  const { scrollY } = useScroll();
-  const opacity = useTransform(scrollY, [0,100], [1, 0]);
-  const scale = useTransform(scrollY, [0,90], [1, 1.5]);
-  const y = useTransform(scrollY, [0,90], [0, 90]);
   
-  const filter = useTransform(
-    scrollY,
-    [0,150],
-    ["blur(0px)", "blur(50px)"]
-  );
-
-  const background = useTransform(
-    scrollY,
-    [0,200],
-    ["blur(18px)", "blur(0px)"]
-  );
-
 
   return (
       <motion.div

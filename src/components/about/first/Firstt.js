@@ -1,12 +1,11 @@
 import './Firstt.css'
 import arcade from "../../../assets/12.png"
 import { motion, useInView, useScroll, useTransform } from 'framer-motion'
-import { useEffect, useRef } from 'react'
+import {  useRef } from 'react'
 import video from '../../../assets/video.mp4'
 import video2 from '../../../assets/static-tv.gif'
 import mypic from "../../../assets/mypic.png"
 import devpic from "../../../assets/web.jpg"
-import { useState } from 'react'
 
 function Firstt() {
   const refrence = useRef(null)
