@@ -17,11 +17,7 @@ function NavMenu(props) {
               <p>About</p>
             </Link>
           </li>
-          <li onClick={props.Toggle}>
-           <Link to={'/skills'}>
-              <p>Skills</p>
-            </Link>
-          </li>
+        
           <li onClick={props.Toggle}>
            <Link to={'/contact'}>
               <p>Contact</p>

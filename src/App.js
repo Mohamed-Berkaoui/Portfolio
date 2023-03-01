@@ -1,7 +1,6 @@
 
 import './App.css';
 import Main from './components/main/Main';
-import Test from './Test';
 
 function App() {
 
@@ -11,8 +10,7 @@ function App() {
 
 
   <div className='App'>
-      
-  <Main/>
+ <Main/>
  </div>
   );
 }

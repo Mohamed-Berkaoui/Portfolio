@@ -1,8 +1,5 @@
 import { AnimatePresence, motion } from 'framer-motion'
-import Test from '../../Test'
 import './About.css'
-import First from './oldfirst/First'
-import Loader from './loader/Loader'
 import Third from './third/Third'
 import Tesst from './test/Tesst'
 import Firstt from './first/Firstt'
@@ -30,7 +27,7 @@ function About() {
           
 
 
-    
+    <Tesst/>
 <Firstt/>
 
 <Third/>

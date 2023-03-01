@@ -4,8 +4,6 @@ import VanillaTilt from 'vanilla-tilt';
 import logo1 from '../../../assets/yogi.png'
 import logo2 from '../../../assets/yogi2.png'
 
-import yogi1 from '../../../assets/yogilogo.png'
-import yogi2 from '../../../assets/yogistar.png'
 
 
 function TiltCard(props) {

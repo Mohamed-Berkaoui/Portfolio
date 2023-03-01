@@ -6,8 +6,6 @@ import NavBar from '../navbar/NavBar';
 import { useState } from 'react';
 import { Routes, Route, useLocation } from "react-router-dom"
 import { AnimatePresence } from 'framer-motion'
-import Test from '../../Test';
-import Skills from '../skills/Skills';
 import Contact from '../contact/Contact';
 
 function Main() {
@@ -43,7 +41,6 @@ function Main() {
               <Routes  location={location} key={location.pathname} >
                 <Route  path='/' element={<Home ison={ison} />} />
                 <Route  path='/about' element={<About ison={ison} />} />
-                <Route  path='/skills' element={<Skills ison={ison} />} />
                 <Route  path='/contact' element={<Contact ison={ison} />} />
 
               </Routes>

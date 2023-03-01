@@ -4,7 +4,6 @@ import './Third.css'
 import what1 from '../../../assets/what1.png'
 import what2 from '../../../assets/what2.png'
 import what3 from '../../../assets/what3.png'
-import back from '../../../assets/png.monster-560.png'
 import lastback1 from '../../../assets/lastback4.png'
 import lastback2 from '../../../assets/lastback3.png'
 import ContactBar from '../../contactbar/ContactBar';
@@ -18,7 +17,6 @@ function Second() {
   })
   const scale = useTransform(scrollYProgress, [0.8, 1], [1, 0.6]);
   const opacity = useTransform(scrollYProgress, [0.76, 1], [1, 0.5])
-  const y = useTransform(scrollYProgress, [0, 1], ['50vh', '50vh'])
   const x = useTransform(scrollYProgress, [0.27, 0.7], ['50%', '-150%'])
 
   const whatido1 = useTransform(scrollYProgress, [0.229,0.23], [ -100,0])
@@ -33,7 +31,6 @@ function Second() {
   const blur2 = useTransform(scrollYProgress, [0.27,0.47,0.7], [0.3, 1,0.3])
   const blur3 = useTransform(scrollYProgress, [0.5,0.7], [0.3, 1])
   const op = useTransform(scrollYProgress, [0.95,1], [0.3, 1])
-  const yimg = useTransform(scrollYProgress, [0.81,0.98], [0, 1])
 
 
   return (
