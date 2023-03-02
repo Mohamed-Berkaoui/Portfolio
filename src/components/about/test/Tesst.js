@@ -17,7 +17,6 @@ latest>100?setDisplay("none"):setDisplay("flex")  })
 console.log(display)
   const opacity = useTransform(scrollY, [0, 100], [1, 0]);
 
-  const scale = useTransform(scrollY, [0, 90], [1, 1.5]);
   const y = useTransform(scrollY, [0, 90], [0, 90]);
 
   const filter = useTransform(
