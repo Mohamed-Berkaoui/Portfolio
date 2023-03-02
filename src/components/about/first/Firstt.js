@@ -1,7 +1,7 @@
 import './Firstt.css'
 import arcade from "../../../assets/12.png"
-import { motion, useInView, useScroll, useTransform } from 'framer-motion'
-import {  useRef } from 'react'
+import { motion, useInView, useScroll, useTransform,useMotionValueEvent } from 'framer-motion'
+import {  useRef, useState } from 'react'
 import video from '../../../assets/video.mp4'
 import video2 from '../../../assets/static-tv.gif'
 import mypic from "../../../assets/mypic.png"
@@ -15,23 +15,30 @@ function Firstt() {
 
 
   })
-  const scale = useTransform(scrollYProgress, [0.45, 0.6, 0.665, 0.766], [1, 5, 10, 0])
+  const [display1,setDisplay]=useState('block')
+
+  const { scrollY} = useScroll()
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+latest>2000?setDisplay("none"):setDisplay("block")  })
+
+  const scale = useTransform(scrollYProgress, [0.45, 0.6], [1,10])
 
   const opacity = useTransform(scrollYProgress, [0.6, 0.601], [1, 0])
-  const y = useTransform(scrollYProgress, [0.45, 0.65], ['0vh', '-38vh'])
-  const phonenumber = useTransform(scrollYProgress, [0.5, 0.6], ['2vw', '4vw'])
+  const y = useTransform(scrollYProgress, [0.45, 0.65], ['0vh', '-100vh'])
+  const phonenumber = useTransform(scrollYProgress, [0.45, 0.55], ['1.5em', '3.5em'])
 
-  const rotate = useTransform(scrollYProgress, [0.45, 0.55], ['0deg', '5deg'])
+  const rotate = useTransform(scrollYProgress, [0.45, 0.47], ['0deg', '5deg'])
   const display = useTransform(scrollYProgress, [0.419, 0.42], [1, 0])
 
   const display2 = useTransform(scrollYProgress, [0.419, 0.42, 0.44], [0, 1, 0])
 
-  const back = useTransform(scrollYProgress, [0.6, 0.7], ["rgb(0,0,0)", "rgb(255,255,255)"])
+  const back = useTransform(scrollYProgress, [0.5, 0.6], ["rgb(40,40,40)", "rgb(255,255,255)"])
 
 
 
-  const h1y = useTransform(scrollYProgress, [0.25, 0.4], ['100vh', '-65vh'])
-  const colortext = useTransform(scrollYProgress, [0.6, 0.7], ['rgb(255,255,255)', 'rgb(0,0,0)'])
+  const h1y = useTransform(scrollYProgress, [0.2, 0.45], ['100vh', '50vh'])
+  const colortext = useTransform(scrollYProgress, [0.5, 0.6], ['rgb(255,255,255)', 'rgb(0,0,0)'])
 
   const ydevimg = useTransform(scrollYProgress, [0.7, 1], [-490, 490])
 
@@ -41,15 +48,25 @@ function Firstt() {
 
   return (
 
-    <>
+  
       <div ref={refrence} className='firstabout'>
 
 
-        <div style={{ position: "sticky", top: '0' }}>
+        <div className='stickydiv' >
 
 
-          <motion.div style={{ scale: scale, opacity: opacity, rotate: rotate, y: y }} className='arcade'>
-            <motion.h1 style={{ y: h1y }} id='h1'>
+          <motion.div className='arcade'>
+          
+
+            <motion.img style={{ scale: scale, opacity: opacity, rotate: rotate, y: y,display:display1 }}  src={arcade} id="arcadeimg" />
+            <motion.video src={video} style={{ opacity: display }} autoPlay={true} muted loop />
+            <motion.img id='static' src={video2} style={{ opacity: display2 }} />
+           
+          </motion.div>
+        </div>
+       
+        <motion.div style={{ background: back }} className='tvshow'>
+        <motion.h1 style={{ y: h1y  }} id='h1'>
               I've always loved technology. From a young age, technology has interested me.I'm like most children play video games of some kind, from tetris to spyro, crash bandicoot to final fantasy, But also  loved playing with computers, my interest didn't stop just at entertainment.
               I remember taking apart my computer when I was 14, an event which horrified my parents.
               I still build my own computers.
@@ -57,17 +74,9 @@ function Firstt() {
 
               Now I focus on people and learning how they interact with websites, making sure they can achieve their goals leaving them satisfied and more likely to return as customers.
             </motion.h1>
-
-            <motion.img src={arcade} id="arcadeimg" />
-            <motion.video src={video} style={{ opacity: display }} autoPlay={true} muted loop />
-            <motion.img id='static' src={video2} style={{ opacity: display2 }} />
-          </motion.div>
-        </div>
-        <motion.div style={{ background: back }} className='tvshow'>
-
           <motion.h1 style={{ fontSize: phonenumber, color: colortext }} id='phonenumber' >+216 22 495 056
             <br /><br /><br /><br /><br />It's all about passion<br /><br /></motion.h1>
-          <motion.h2 id='text2'  >
+          <motion.h2 style={{  color: colortext }}  id='text2'  >
             I am ambitious,ready to innovate,
             both in my private life and in my
             professional life.Developing my career,
@@ -111,17 +120,14 @@ function Firstt() {
 
           <div className='infos'>
             <div className='info1'>
-              <p className='myinormations1'>Age </p >
-              <p className='myinormations2'> 30 years</p >
+           <span className="myinformations" data-replace="30 years"><span>age</span></span>
+             
+              <span className="myinformations" data-replace="Tunisia"><span>Residence</span></span>
 
-              <p className='myinormations1'>Residence </p >
-              <p className='myinormations2'> Tunisia</p >
-              <p className='myinormations1'>Address </p >
-              <p className='myinormations2'> beb souika, Tunis</p >
-
-              <p className='myinormations1'>E-mail </p >
-              <p className='myinormations2'> berkaouimed1@gmail.com</p >
-
+            
+              <span className="myinformations" data-replace="beb souika, Tunis"><span>Address</span></span>
+            
+              <span className="myinformations" data-replace="berkaouimed1@gmail.com"><span>E-mail </span></span>
             </div>
             <div ref={ref} className='info2'>
               <motion.img style={{ y: isInView ? 0 : 700 }} src={mypic} id='mypic' alt='' /></div>
@@ -131,7 +137,7 @@ function Firstt() {
 
 
 
-    </>
+   
   )
 }
 

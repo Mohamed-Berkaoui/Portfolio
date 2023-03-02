@@ -18,6 +18,7 @@
 
 
 .left {
+    top:8% ;
     flex-grow: 1;
     width: 100%;
     max-width: 80rem;
@@ -28,6 +29,23 @@
   z-index: 3;
 
 
+}
+
+
+.dashed-wave {
+    position: absolute;
+    z-index: 2;
+   height: 130%;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+#dashed-wave {
+    fill: none;
+    stroke: var(--backcolor1);
+    stroke-width: 1px;
+    stroke-dasharray: 6.5;
+    opacity: 1;
 }
 
 .form-wrapper {
@@ -115,7 +133,7 @@ width: 100%;
 textarea.contact-input {
     resize: none;
     width: 100%;
-    min-height: 150px;
+    height: 150px;
 }
 
 textarea.contact-input~label {
@@ -213,23 +231,6 @@ left: -100%;
 }
 
 
-
-.dashed-wave {
-    position: absolute;
-    z-index: 2;
-   height: 130%;
-    bottom: 50%;
-    left: -250px;
-    transform: translateY(50%);
-}
-
-#dashed-wave {
-    fill: none;
-    stroke: var(--backcolor1);
-    stroke-width: 1px;
-    stroke-dasharray: 6.5;
-    opacity: 1;
-}
 
 
 
@@ -365,20 +366,46 @@ left: -100%;
 .text{
     font-size: 0.9rem;
 }
-.left{
-    width: 55%;
+
+.contact-heading h1 {
+font-size:2.5rem;
+}
+.wave-wrap{left: -130%;}
 
 }
-.wave-wrap{left: -150%;}
-.dashed-wave {left: -100%;}
+
+@media (max-width: 800px) {
+    .wave-wrap{left: -155%;}
 
 }
-@media (max-width: 600px) {
-    .left{width: 99%;
+@media (max-width: 700px) {
+    .wave-wrap{left: -180%;}
+
+}
+
+
+@media (max-width: 640px) {
+    .left{width: 100%;
         
     }
-  
-    .image-wrapper{display: none;}
-    .wave-wrap{display: none;}
-    .dashed-wave{left: -5000%;}
+    .right{display: none;}
+   
 }
+@media (max-width: 440px) {
+    .input-wrap {
+    grid-column: span 2;
+    }
+    .contact-heading h1 {
+        font-size:1.8rem;
+        }
+        .text{
+            font-size:0.5rem;
+
+        }
+    .input-wrap textarea{
+        height: 100%;
+    }
+    .contact-buttons{
+    grid-template-columns: 1fr;
+    row-gap: 2rem;}
+    }

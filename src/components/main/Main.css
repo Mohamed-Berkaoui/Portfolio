@@ -1,16 +1,12 @@
 
 .container {
-  width: 100%;
+  width: 100vw;
   
   background-image: linear-gradient(135deg, #4d6683 0%, #a8a8a8 74%);
   position: relative;
   
 }
-.container[data-ison="true"] {
-  
 
-  background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
-}
 .container.active{
   height: 100vh;
   overflow: hidden;
@@ -43,12 +39,7 @@ position: relative;
 
 }
 
-.page[data-ison="true"] {
-  background-color: rgba(255, 255, 255, 0.185);
-  color: var(--textcolor1);
 
-
-}
 .container.active .bar {
   transform: rotate(360deg);
   background-color: transparent;
@@ -62,7 +53,7 @@ position: relative;
 .container.active .main {
   animation: main-animation 0.8s ease;
   cursor: pointer;
-  transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  transform: perspective(1300px) rotateY(20deg) translateZ(25vw) scale(0.5);
 }
 
 @keyframes main-animation {
@@ -71,7 +62,7 @@ position: relative;
   }
 
   to {
-    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    transform: perspective(1300px) rotateY(20deg) translateZ(25vw) scale(0.5);
   }
 }
 
@@ -100,7 +91,7 @@ position: relative;
 
 .container.active .shadow.one {
   animation: shadow-one 0.9s ease-out;
-  transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+  transform: perspective(1300px) rotateY(20deg) translateZ(15vw) scale(0.5);
 }
 
 @keyframes shadow-one {
@@ -109,17 +100,17 @@ position: relative;
   }
 
   5% {
-    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    transform: perspective(1300px) rotateY(20deg) translateZ(20vw) scale(0.5);
   }
 
   100% {
-    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+    transform: perspective(1300px) rotateY(20deg) translateZ(15vw) scale(0.5);
   }
 }
 
 .container.active .shadow.two {
   animation: shadow-two 0.9s ease-out;
-  transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+  transform: perspective(1300px) rotateY(20deg) translateZ(5vw) scale(0.5);
 }
 
 @keyframes shadow-two {
@@ -128,19 +119,38 @@ position: relative;
   }
 
   20% {
-    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    transform: perspective(1300px) rotateY(20deg) translateZ(20vw) scale(0.5);
   }
 
   100% {
-    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+    transform: perspective(1300px) rotateY(20deg) translateZ(5vw) scale(0.5);
   }
 }
 
 .container.active .main:hover + .shadow.one {
-  transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
+  transform: perspective(1300px) rotateY(20deg) translateZ(16.5vw) scale(0.5);
 }
 
 .container.active .main:hover {
-  transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+  transform: perspective(1300px) rotateY(20deg) translateZ(28vw) scale(0.5);
 }
+/*
+@media (max-width: 500px) {
 
+  .container.active .main {
+    animation: main-animation 0.8s ease;
+    cursor: pointer;
+    transform: perspective(2500px) rotateY(10deg) translateZ(310px) scale(0.5);
+  }
+  
+  @keyframes main-animation {
+    from {
+      transform: translate(0);
+    }
+  
+    to {
+      transform: perspective(2500px) rotateY(10deg) translateZ(310px) scale(0.5);
+    }
+  }
+  
+} */

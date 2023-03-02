@@ -8,6 +8,10 @@ import { useEffect, useState } from 'react'
 import Placeholder from './test/placeholder/Placeholder'
 
 function About() {
+
+
+
+
       const [loading, setLoading] = useState(false);
   useEffect(() => {
     setTimeout(() => {
@@ -16,7 +20,11 @@ function About() {
   }, []);
       return (
 <>
-<AnimatePresence>
+
+
+
+          
+            <AnimatePresence>
 {loading ?null: (
     
     
@@ -34,6 +42,7 @@ function About() {
 
 
 <ContactBar/>
+
 
             </motion.div>
        

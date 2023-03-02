@@ -1,7 +1,7 @@
 
-
+.animatedtext{font-size: 2.5rem;}
 .animatedtext h3{
-      font-size: 2.7rem;
+      font-size:1em;
     font-weight: 500;
        
         font-variant: small-caps;
@@ -10,7 +10,7 @@
     
     
     .animatedtext p{
-        font-size:2.7rem;
+        font-size:1em;
        
         font-variant: small-caps;
     
@@ -91,7 +91,20 @@
           -0.04em -0.06em 0 rgba(0, 0, 255, 0.75);
       }
     }
+    @media (max-width: 600px) {
+      .animatedtext{font-size: 2.2rem;}
 
- 
+    }
     
-    
+    @media (max-width: 500px) {
+      .animatedtext{font-size: 1.8rem;
+      margin-top: 100px;}
+
+    }   @media (max-width: 400px) {
+      .animatedtext{font-size: 1.4rem;}
+
+    } 
+    @media (max-width: 350px) {
+      .animatedtext{font-size: 1rem;}
+
+    } 

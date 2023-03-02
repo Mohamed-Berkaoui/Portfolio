@@ -1,9 +1,8 @@
 import './Placeholder.css'
 
 import { motion } from 'framer-motion'
- function Placeholder() {
+function Placeholder() {
 
-  
 
   return (
       <motion.div

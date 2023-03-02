@@ -17,7 +17,6 @@ function Second() {
   })
   const scale = useTransform(scrollYProgress, [0.8, 1], [1, 0.6]);
   const opacity = useTransform(scrollYProgress, [0.76, 1], [1, 0.5])
-
   const x = useTransform(scrollYProgress, [0.27, 0.7], ['50%', '-150%'])
 
   const whatido1 = useTransform(scrollYProgress, [0.229,0.23], [ -100,0])
@@ -38,7 +37,7 @@ function Second() {
     <div ref={carouselRef}  className='second-about'>
       <motion.div style={{ height: "300vh", background: "black" }}>
         <div style={{ top: '0%', position: "sticky" }}>
-          <motion.div style={{ scale: scale, opacity: opacity }} className='backgroundsecond'>
+          <motion.div style={{ scale: scale, opacity: opacity, }} className='backgroundsecond'>
          
 
             <div className='leftslide'>
