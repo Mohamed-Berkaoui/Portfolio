@@ -12,12 +12,12 @@ const [display,setDisplay]=useState('flex')
 
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-latest>50?setDisplay("none"):setDisplay("flex")  })
+latest>100?setDisplay("none"):setDisplay("flex")  })
 
 console.log(display)
   const opacity = useTransform(scrollY, [0, 1], [1, 0]);
 
-  const scale = useTransform(scrollY, [0, 1], [1, 1.2]);
+  const scale = useTransform(scrollY, [0, 1], [1, 1.1]);
   const y = useTransform(scrollY, [0, 1], [0, 90]);
 
 

@@ -1,6 +1,9 @@
-.svgs{
-  width: 100vw;
-    height: 100vh;
+
+
+.blureffect{
+
+ background-color: transparent;
+
 }
 .hero {
     width: 100vw;
@@ -55,6 +58,7 @@
   .blur-mask {   transition: all 0.3s ease;
 
     width: 100vw;
+    height: 120vh;
     bottom: 0;
     left: 0;
     position: fixed;
