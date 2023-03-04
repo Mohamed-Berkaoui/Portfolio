@@ -12,35 +12,25 @@ const [display,setDisplay]=useState('flex')
 
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-latest>100?setDisplay("none"):setDisplay("flex")  })
+latest>50?setDisplay("none"):setDisplay("flex")  })
 
 console.log(display)
-  const opacity = useTransform(scrollY, [0, 100], [1, 0]);
+  const opacity = useTransform(scrollY, [0, 1], [1, 0]);
 
-  const y = useTransform(scrollY, [0, 90], [0, 90]);
+  const scale = useTransform(scrollY, [0, 1], [1, 1.2]);
+  const y = useTransform(scrollY, [0, 1], [0, 90]);
 
-  const filter = useTransform(
-    scrollY,
-    [0, 150],
-    ["blur(0px)", "blur(50px)"]
-  );
-
-  const background = useTransform(
-    scrollY,
-    [0, 200],
-    ["blur(18px)", "blur(0px)"]
-  );
 
 
   return (
-    <>
+    <div>
       <motion.div
         className="hero"
         ref={el}
         style={{
           opacity: opacity,
-          scale: scale
-          , filter: filter, y: y,
+        
+           y: y,
           display:display
         }}
       >
@@ -48,7 +38,7 @@ console.log(display)
 
 
         <motion.svg
-
+style={{scale:scale}}
 
           id="loader" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1445.67 1692.28"><motion.path
@@ -73,7 +63,7 @@ console.log(display)
           <h2 >Hi Again</h2>
 
         </motion.div>
-        <motion.div initial={{ y: 0 }}
+        <motion.div style={{display:display}} initial={{ y: 0 }}
           animate={{ y: 10 }}
 
           transition={{ duration: 0.8, ease: 'easeInOut', repeat: Infinity }}
@@ -99,12 +89,12 @@ console.log(display)
         className="blur-mask"
         style={{
           opacity: opacity,
-          backdropFilter: background,display:display
+          backdropFilter: 'blur(25px)',display:display
         }}
 
       />
 
-    </>
+    </div>
   )
 }
 

@@ -25,7 +25,7 @@ latest>2000?setDisplay("none"):setDisplay("block")  })
   const scale = useTransform(scrollYProgress, [0.45, 0.6], [1,10])
 
   const opacity = useTransform(scrollYProgress, [0.6, 0.601], [1, 0])
-  const y = useTransform(scrollYProgress, [0.45, 0.65], ['0vh', '-100vh'])
+  const y = useTransform(scrollYProgress, [0,0.45, 0.65], ['0vh','0vh', '-100vh'])
   const phonenumber = useTransform(scrollYProgress, [0.45, 0.55], ['1.5em', '3.5em'])
 
   const rotate = useTransform(scrollYProgress, [0.45, 0.47], ['0deg', '5deg'])
