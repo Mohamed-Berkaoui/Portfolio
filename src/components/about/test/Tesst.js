@@ -8,7 +8,6 @@ function Tesst() {
 
 
 
-  const mobiledivice= (window.innerWidth<600 )?true:false
 
 
 
