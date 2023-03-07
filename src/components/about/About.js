@@ -7,6 +7,7 @@ import {  useState } from 'react'
 import Placeholder from './test/placeholder/Placeholder'
 import img from '../../assets/12.png'
 import ScrollToTop from './scrolltotop/Scrolltotop'
+import Menu from './test/Menu'
 function About(props) {
 
 
@@ -20,7 +21,7 @@ function About(props) {
 
       return (
 <>
-{!props.res?(<div id='placeholder'><Tesst/> <img src={img} alt=''/></div>):(
+{!props.res?(<div id='placeholder'><Menu/> <img src={img} alt=''/></div>):(
 
         <>
             <AnimatePresence>

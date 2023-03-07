@@ -67,8 +67,8 @@ transform: rotate(-7deg);
 #static{
 position: absolute;
 
-margin-top: 10vh;
-height:25vh;
+margin-top: 20vh;
+height:40vh;
     
 }
 .tvshow{
@@ -278,7 +278,10 @@ cursor: default;  }
 
 
 @media (max-width:700px) {
-    .firstabout{font-size: 1.3rem;}
-    
+    .firstabout{font-size: 1.5rem;}
+    .tvshow #phonenumber{
+      padding-top: 30%;
+     
+  }
 }
 

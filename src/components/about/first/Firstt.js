@@ -35,7 +35,7 @@ latest>2000?setDisplay("none"):setDisplay("block")  })
 
   const display = useTransform(scrollYProgress, [0.409, 0.41], [1, 0])
 
-  const display2 = useTransform(scrollYProgress, [0.409, 0.41, 0.435], [0, 1, 0])
+  const display2 = useTransform(scrollYProgress, [0.409, 0.41, 0.425], [0, 1, 0])
 
   const back = useTransform(scrollYProgress, [0.5, 0.6], ["rgb(40,40,40)", "rgb(255,255,255)"])
 

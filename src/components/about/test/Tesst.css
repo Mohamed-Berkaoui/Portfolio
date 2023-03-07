@@ -47,6 +47,8 @@ top: 0;
 
 
     .hero svg{   transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden !important;
 
         display: flex;
         position: sticky;
@@ -60,17 +62,30 @@ top: 0;
   .blur-mask {   
 overflow: hidden;
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     bottom: 0;
     left: 0;
     position: fixed;
     right: 0;
     top: 0;
-    transform: translateZ(0);
     z-index: 5;
     transition: all 0.2s ease;
    background-color: rgba(240, 248, 255, 0.11);
   }
+  
+  
+  .blur-mask2 {   
+        width: 100vw;
+        height: 100vh;
+        bottom: 0;
+        left: 0;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: translateZ(0);
+        z-index: 5;
+       background-color: rgba(240, 248, 255, 0.11);
+      }
   
 
   
