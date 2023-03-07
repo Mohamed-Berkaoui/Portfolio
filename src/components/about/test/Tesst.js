@@ -28,7 +28,7 @@ console.log(window.innerWidth)
   const opacity = useTransform(scrollY, [0, 10], [1, 0]);
 
   const scalee = useTransform(scrollY, [0, 1], [1, 1.5]);
-  const y = useTransform(scrollY, [0, 1], [0,mobiledivice?200:400]);
+  const y = useTransform(scrollY, [0, 1], [0,200]);
 
 
 
@@ -99,7 +99,7 @@ style={{ scale:scalee, display:display}}
         className="blur-mask"
         style={{ 
           opacity: opacity,y:y,
-          scale:window.innerWidth>500? scalee:1,
+         
           backdropFilter: 'blur(25px)',display:display
         }}
 
