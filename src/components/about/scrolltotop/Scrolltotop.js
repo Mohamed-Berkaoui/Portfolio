@@ -23,7 +23,7 @@ const ScrollToTop = () => {
         <div className="top-to-btm">
             {" "}
             {showTopBtn && (
-                <img src={scroll}
+                <img src={scroll} alt=""
                     className="icon-position icon-style"
                     onClick={goToTop}
                 />

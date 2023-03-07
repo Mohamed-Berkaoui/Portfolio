@@ -20,7 +20,7 @@ function About(props) {
 
       return (
 <>
-{!props.res?(<div id='placeholder'><Tesst/> <img src={img} /></div>):(
+{!props.res?(<div id='placeholder'><Tesst/> <img src={img} alt=''/></div>):(
 
         <>
             <AnimatePresence>

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion'
 import './contact.css'
-import ContactBar from '../contactbar/ContactBar';
 
 function Contact() {
   const [focus1, Setfocus1] = useState(false)
