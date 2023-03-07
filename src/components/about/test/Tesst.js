@@ -8,6 +8,7 @@ function Tesst() {
 
 
 
+  const mobiledivice= (window.innerWidth<500 )?true:false
 
 
 
@@ -24,9 +25,9 @@ const [display,setDisplay]=useState('flex')
 latest>200?setDisplay("none"):setDisplay("flex")  })
 
 console.log(window.innerWidth)
-  const opacity = useTransform(scrollY, [0, 10], [1, 0]);
+  const opacity = useTransform(scrollY, [0, 1], [1, 0]);
 
-  const scalee = useTransform(scrollY, [0, 1], [1, 1.5]);
+  const scalee = useTransform(scrollY, [0, 1], [1,mobiledivice?1: 1.5]);
   const y = useTransform(scrollY, [0, 1], [0,200]);
 
 
