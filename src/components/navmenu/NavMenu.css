@@ -1,7 +1,7 @@
 
 .links {
     position: absolute;
-    width: 30%;
+    width: 40%;
     right: 0;
     top: 0;
     height: 100vh;
@@ -10,17 +10,18 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+    overflow: hidden;
+
   }
   
   .links  ul {
     list-style: none;
-    overflow: hidden;
   }
   
   .links p {
     text-decoration: none;
     color: #000;
-    padding: 0.7rem 0;
+    padding: 0.7rem 0.1rem;
     display: inline-block;
     font-size:1.2rem;
     font-weight: bold;

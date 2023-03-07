@@ -1,7 +1,8 @@
 
 
 .blureffect{
-
+position: sticky;
+top: 0;
  background-color: transparent;
 
 }
@@ -13,6 +14,8 @@
     justify-content: center;
     align-items: center;
    position: fixed;
+  
+   overflow: hidden;
    top: 0;
    left: 0;
    transition: all 0.3s ease;
@@ -24,14 +27,13 @@
 .aboutheadertext{
   
   transition: all 0.3s ease;
-
-  font-size:5vw; 
+  font-size:4rem; 
   font-weight: 500;
   top: 28vh;  
-  
+ 
   }
   .aboutheadertext h2{   transition: all 0.3s ease;
-
+    
    color: transparent;
    -webkit-text-stroke-color: rgba(0, 0, 0, 0.616);
   -webkit-text-stroke-width:2px ;
@@ -55,10 +57,10 @@
   
 
   
-  .blur-mask {   transition: all 0.3s ease;
-
+  .blur-mask {   
+overflow: hidden;
     width: 100vw;
-    height: 120vh;
+    height: 100vh;
     bottom: 0;
     left: 0;
     position: fixed;
@@ -66,7 +68,7 @@
     top: 0;
     transform: translateZ(0);
     z-index: 5;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
    background-color: rgba(240, 248, 255, 0.11);
   }
   
@@ -83,6 +85,30 @@
 
     position: absolute;
     left: 0%;
-    top:70%;
+    top:80%;
     width: 50%;
+   }
+   @media (max-width:1200px) {
+    #scrolldown{   
+
+      left: -10%;
+      width: 80%;
+     }
+   }
+   @media (max-width:700px) {
+    #scrolldown{   
+
+      left: -20%;
+      width: 120%;
+     }
+   }
+ 
+   @media (max-width:700px) {
+    #scrolldown{   
+
+      left: -20%;
+     }
+     .aboutheadertext{font-size: 2rem; padding-left: 50px;
+     }
+    
    }

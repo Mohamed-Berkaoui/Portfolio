@@ -97,7 +97,7 @@ top: 2%;
 .aboutme:hover .discreptionbox{
     opacity: 1;
 }
-@media screen and (max-width: 1350px) {
+@media  (max-width: 1350px) {
     .aboutme{  width: 300px;
         height: 200px;}
 
@@ -107,4 +107,20 @@ top: 2%;
 
         
         }
+}
+@media  (max-width: 800px) {
+    .aboutme{  width: 220px;
+        height: 140px;}
+
+        .aboutme:hover{
+            height:300px !important;
+            top:25vh;
+
+        
+        }
+        .aboutme .topname1{font-size: 1.8rem; }
+
+.aboutme .topname2{font-size: 1.1rem;
+
+}
 }

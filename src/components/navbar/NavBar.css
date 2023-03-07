@@ -58,10 +58,10 @@
   }
 
   .bar {
-  width: 30px;
-  height: 4px;
+  width: 40px;
+  height: 5px;
   border-radius: 2px;
-  background-color: rgb(202, 69, 69);
+  background-color: rgb(136, 27, 27);
   transition: 0.5s;
   position: relative;
   transition: 0.5s;
@@ -87,7 +87,7 @@
   position: absolute;
   width: inherit;
   height: inherit;
-  background-color:rgb(202, 69, 69);
+  background-color:rgb(136, 27, 27);
 
   transition: 0.5s;
 }

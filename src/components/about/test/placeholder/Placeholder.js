@@ -1,8 +1,20 @@
 import './Placeholder.css'
 
 import { motion } from 'framer-motion'
+import Typed from 'typed.js';
+import { useEffect, useRef } from 'react';
 function Placeholder() {
+  const el = useRef(null)
+  useEffect(() => {
+     new Typed(el.current, {
+      strings: ["LOADING..."],
+      startDelay: 500,
 
+      typeSpeed: 200,
+    
+      showCursor: false
+    });
+  }, [el])
 
   return (
       <motion.div
@@ -43,7 +55,8 @@ function Placeholder() {
           <h2 >Hi Again</h2>
 
         </motion.div>
-        
+        <span className='loadingtext' ref={el}></span>
+
       </motion.div>
       
 

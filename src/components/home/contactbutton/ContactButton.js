@@ -1,9 +1,11 @@
+import { Link } from 'react-router-dom'
 import './ContactButton.css'
 function ContactButton() {
   return (
+    
     <div className='bottoncontact' >
-    <span>Contact ME!</span>
-    <div className='liquid'></div>  </div>
+    <span id='buttonspan'>Contact ME!</span>
+    <div className='liquid'></div> </div>
   )
 }
 

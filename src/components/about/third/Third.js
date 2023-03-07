@@ -16,26 +16,26 @@ function Second() {
 
   })
   const scale = useTransform(scrollYProgress, [0.8, 1], [1, 0.6]);
-  const opacity = useTransform(scrollYProgress, [0.76, 1], [1, 0.5])
-  const x = useTransform(scrollYProgress, [0.27, 0.7], ['50%', '-150%'])
+  const opacity = useTransform(scrollYProgress, [0.76, 1], [1, 0.2])
+  const x = useTransform(scrollYProgress, [0.38, 0.67], ['50%', '-150%'])
 
-  const whatido1 = useTransform(scrollYProgress, [0.229,0.23], [ -100,0])
-  const whatido2 = useTransform(scrollYProgress, [0.229,0.23], [ 100,0])
-  const whatido3 = useTransform(scrollYProgress, [0.229,0.23], [ 0,1])
+  const whatido1 = useTransform(scrollYProgress, [0.34,0.344], [ -100,0])
+  const whatido2 = useTransform(scrollYProgress, [0.34,0.344], [ 100,0])
+  const whatido3 = useTransform(scrollYProgress, [0.34,0.344], [ 0,1])
 
 
-  const scale1 = useTransform(scrollYProgress, [0.27,0.48], [ 1,0.5])
-  const scale2 = useTransform(scrollYProgress, [0.27,0.48,0.7], [0.5, 1,0.5])
-  const scale3 = useTransform(scrollYProgress, [0.48,0.7], [0.5, 1])
-  const blur1 = useTransform(scrollYProgress, [0.26,0.47], [1,0.3])
-  const blur2 = useTransform(scrollYProgress, [0.27,0.47,0.7], [0.3, 1,0.3])
-  const blur3 = useTransform(scrollYProgress, [0.5,0.7], [0.3, 1])
-  const op = useTransform(scrollYProgress, [0.95,1], [0.3, 1])
+  const scale1 = useTransform(scrollYProgress, [0.38,0.53], [ 1,0.5])
+  const scale2 = useTransform(scrollYProgress, [0.38,0.54,0.67], [0.5, 1,0.5])
+  const scale3 = useTransform(scrollYProgress, [0.54,0.67], [0.5, 1])
+  const blur1 = useTransform(scrollYProgress, [0.38,0.53], [1,0.1])
+  const blur2 = useTransform(scrollYProgress, [0.38,0.53,0.67], [0.1, 1,0.1])
+  const blur3 = useTransform(scrollYProgress, [0.53,0.67], [0.1, 1])
+  const op = useTransform(scrollYProgress, [0.95,1], [0.1, 1])
 
 
   return (
     <div ref={carouselRef}  className='second-about'>
-      <motion.div style={{ height: "300vh", background: "black" }}>
+      <motion.div style={{ height: "200vh"}}>
         <div style={{ top: '0%', position: "sticky" }}>
           <motion.div style={{ scale: scale, opacity: opacity, }} className='backgroundsecond'>
          

@@ -3,7 +3,7 @@
     height: 100vh;
 position: absolute;
     object-fit: cover;
-    background-color: beige;
+    background-color: rgb(221, 221, 221);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,4 +23,8 @@ position: absolute;
   width: auto;
   height: 100%;
 
+}
+.loadingtext{
+  position: absolute;
+font-size: 2rem;
 }

@@ -4,6 +4,7 @@ import TiltCard from './tiltcard/TiltCard'
 import ContactButton from './contactbutton/ContactButton'
 import HomeText from './hometext/HomeText'
 import ContactBar from '../contactbar/ContactBar'
+import { Link } from 'react-router-dom'
 
 
 function Home(props) {
@@ -37,8 +38,8 @@ function Home(props) {
           <TiltCard ison={props.ison} options={options} /> 
           </motion.div>
           
-          <div className='contactbutton'>
-          <ContactButton /></div>
+          <div className='contactbutton'><Link style={{textDecoration:'none'}} to={'/contact'}>
+          <ContactButton /></Link></div>
           <ContactBar/>
 
         </div>

@@ -19,4 +19,16 @@
   background-color: black;
  }
 
-  
+  #placeholder{ width: 100vw;
+ height: 100vh;
+position: relative
+;
+overflow: hidden;
+}
+#placeholder img{
+width: 100%;
+height: 100%;
+filter: blur(10px);
+position: absolute;
+object-fit: cover;
+}

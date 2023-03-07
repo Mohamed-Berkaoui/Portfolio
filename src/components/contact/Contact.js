@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion'
 import './contact.css'
+import ContactBar from '../contactbar/ContactBar';
 
 function Contact() {
   const [focus1, Setfocus1] = useState(false)
@@ -31,6 +32,7 @@ function Contact() {
 
 
   return (
+    
     <motion.div initial={{ opacity: 0, scale: 2 }} animate={{ opacity: 1, scale: 1 }} exit={{ scale: 2, opacity: 0 }} transition={{ duration: 1, ease: 'easeInOut' }}
       className="contact">
       <div className="contactcontainer">
@@ -75,7 +77,9 @@ function Contact() {
                 </div>
               </div>
             </form>
-
+            <svg className='dashed-wave' viewBox="0 0 345 877" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path id="dashed-wave" d="M297.64,0,223.23,210.47,148.82,420.94,74.41,631.42,0,841.89H595.28l8.38-204.6L612,432.68q.24-5.87.24-11.74T612,409.21L603.66,204.6,595.28,0H297.64Z" />
+          </svg>
           </div>
         </div>
 
@@ -95,14 +99,15 @@ function Contact() {
          
 
           </div>
-          <svg className='dashed-wave' viewBox="0 0 345 877" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path id="dashed-wave" d="M297.64,0,223.23,210.47,148.82,420.94,74.41,631.42,0,841.89H595.28l8.38-204.6L612,432.68q.24-5.87.24-11.74T612,409.21L603.66,204.6,595.28,0H297.64Z" />
-          </svg>
+         
 
         </div>
       </div>
 
+
     </motion.div>
+   
+
   )
 }
 

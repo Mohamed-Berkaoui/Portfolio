@@ -9,15 +9,21 @@ import { AnimatePresence } from 'framer-motion'
 import Contact from '../contact/Contact';
 
 function Main() {
-  const [ison, setIson] = useState(0);
-  const toggleSwitch = () => setIson(!ison);
 
   const location = useLocation()
 
-  const [isActive, setActive] = useState("true");
-  const Toggleclass = () => {
-    setActive(!isActive);
+  const [isActive, setActive] = useState(true);
+  const [res, setRes] = useState(isActive);
 
+  const Toggleclass = () => {
+    isActive?setRes(!isActive): setTimeout(() => {
+      setRes(!isActive);
+
+    }, 500);
+   
+      setActive(!isActive);
+
+   
 
 
     
@@ -26,22 +32,22 @@ function Main() {
   return (
 <>   
 
-    <div data-ison={ison}  className={isActive ? "container" : "container active"} >
-    <NavBar Toggle={Toggleclass} switch={toggleSwitch} ison={ison} />
+    <div  className={isActive ? "container" : "container active"} >
+    <NavBar Toggle={Toggleclass}   />
 
       <div className="main-container">
        
 
-        <div data-ison={ison} onClick={() => { isActive ? setActive(isActive) : setActive(!isActive) }} className="main">
+        <div onClick={isActive?null:Toggleclass} className="main">
       
-          <div data-ison={ison} className='page'>
+          <div  className='page'>
      
             <AnimatePresence  mode="wait" >
 
               <Routes  location={location} key={location.pathname} >
-                <Route  path='/' element={<Home ison={ison} />} />
-                <Route  path='/about' element={<About ison={ison} />} />
-                <Route  path='/contact' element={<Contact ison={ison} />} />
+                <Route  path='/' element={<Home />} />
+                <Route  path='/about' element={<About res={res} />} />
+                <Route  path='/contact' element={<Contact />} />
 
               </Routes>
             </AnimatePresence >
@@ -50,7 +56,7 @@ function Main() {
         <div className="shadow one"></div>
         <div className="shadow two"></div>
       </div>
-      <NavMenu ison={ison} Toggle={Toggleclass} />
+      <NavMenu Toggle={Toggleclass} />
     </div>
 </>
   )

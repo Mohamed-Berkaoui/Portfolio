@@ -22,23 +22,27 @@ function Firstt() {
   useMotionValueEvent(scrollY, "change", (latest) => {
 latest>2000?setDisplay("none"):setDisplay("block")  })
 
-  const scale = useTransform(scrollYProgress, [0.45, 0.6], [1,10])
+  const scale = useTransform(scrollYProgress, [0.35,0.4,0.47, 0.6], [1,1.2,1.2,10])
 
   const opacity = useTransform(scrollYProgress, [0.6, 0.601], [1, 0])
-  const y = useTransform(scrollYProgress, [0,0.45, 0.65], ['0vh','0vh', '-100vh'])
-  const phonenumber = useTransform(scrollYProgress, [0.45, 0.55], ['1.5em', '3.5em'])
+  const y = useTransform(scrollYProgress, [0.47, 0.65], ['0vh', '-100vh'])
+  const phonenumber = useTransform(scrollYProgress, [0.47, 0.55], ['1.5em', '3.5em'])
 
-  const rotate = useTransform(scrollYProgress, [0.45, 0.47], ['0deg', '5deg'])
-  const display = useTransform(scrollYProgress, [0.419, 0.42], [1, 0])
+  const rotate = useTransform(scrollYProgress, [0.35, 0.4], ['0deg', '6deg'])
+  const rotatevdieo = useTransform(scrollYProgress, [0.35, 0.4], ['-6deg', '0deg'])
+  const scalevideo = useTransform(scrollYProgress, [0.35,0.4], [1,1.2])
+  const yvideo = useTransform(scrollYProgress, [0.35,0.4], [0,10])
 
-  const display2 = useTransform(scrollYProgress, [0.419, 0.42, 0.44], [0, 1, 0])
+  const display = useTransform(scrollYProgress, [0.409, 0.41], [1, 0])
+
+  const display2 = useTransform(scrollYProgress, [0.409, 0.41, 0.435], [0, 1, 0])
 
   const back = useTransform(scrollYProgress, [0.5, 0.6], ["rgb(40,40,40)", "rgb(255,255,255)"])
 
 
+  const h1y = useTransform(scrollYProgress, [0.2, 0.45], [window.innerWidth>500?'180vh':'120vh', '60vh'])
 
-  const h1y = useTransform(scrollYProgress, [0.2, 0.45], ['100vh', '50vh'])
-  const colortext = useTransform(scrollYProgress, [0.5, 0.6], ['rgb(255,255,255)', 'rgb(0,0,0)'])
+  const colortext = useTransform(scrollYProgress, [0.5, 0.51], ['rgb(255,255,255)', 'rgb(0,0,0)'])
 
   const ydevimg = useTransform(scrollYProgress, [0.7, 1], [-490, 490])
 
@@ -59,7 +63,7 @@ latest>2000?setDisplay("none"):setDisplay("block")  })
           
 
             <motion.img style={{ scale: scale, opacity: opacity, rotate: rotate, y: y,display:display1 }}  src={arcade} id="arcadeimg" />
-            <motion.video src={video} style={{ opacity: display }} autoPlay={true} muted loop />
+            <motion.video src={video} style={{ opacity: display ,rotate:rotatevdieo ,scale:scalevideo,y:yvideo}} autoPlay={true} muted loop />
             <motion.img id='static' src={video2} style={{ opacity: display2 }} />
            
           </motion.div>

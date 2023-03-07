@@ -9,12 +9,12 @@ function HomeText() {
     const el = useRef(null)
     useEffect(() => {
        new Typed(el.current, {
-        strings: ["WEB DEVELOPER.^800", "WEB DESIGNER.^800", "GRAPHIC DESIGNER.^800", "FULLSTACK DEVELOPER.^1700"],
+        strings: ["WEB DEVELOPER.^800", "WEB DESIGNER.^800", "GRAPHIC DESIGNER.^800", "FULLSTACK DEVELOPER.^1000"],
         backDelay: 10,
         startDelay: 800,
   
-        typeSpeed: 20,
-        backSpeed: 10,
+        typeSpeed: 30,
+        backSpeed: 30,
         smartBackspace: true,
         loop: true,
         showCursor: false

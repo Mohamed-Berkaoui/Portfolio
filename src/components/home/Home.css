@@ -9,11 +9,7 @@ background-color: var(--backcolor2);
 
   
 }
-[data-ison="true"] .overlay {
 
-  background-color: var(--backcolor1);
-
-}
 .hometext{
 font-size: 18px;
   position: absolute;
@@ -31,6 +27,7 @@ font-size: 18px;
     position: relative;
     top:65vh;
     left:20%;
+    text-decoration: none;
 
   }
 
@@ -70,7 +67,7 @@ transform: translate(-50%,75%);
 
 }
 .wavyanimation .wave::before{
-border-radius: 45%;
+border-radius: 47%;
 background:rgba(211, 211, 211, 0.408);
 animation: waves 15s linear infinite;
 }
@@ -81,7 +78,7 @@ background: rgba(43, 51, 59, 0.4);
 
 
 .wavyanimation .wave::after{
-border-radius:220%;
+border-radius:50%;
 background: var(--backcolor2);
 animation: waves 15s linear infinite;
 
@@ -101,47 +98,35 @@ background: var(--backcolor1);
   transform: translate(50%, -75%) rotate(-20deg);
 }
 }
-@media screen and (max-width: 1100px) {
-  .hometext{
-font-size: 14px;
-    position: absolute;
-    top: 15%;
-    width: max-content;
-    }
-    .tiltcard{
-      position: absolute;
-      left: 40%;
-          top: 12%;
-      
-      }
-      .contactbutton{ 
-        position: absolute;
-        top:32%;
-        left:75%;}
 
-
-}
-@media screen and (max-width: 850px){
+@media  (max-width: 600px){
   .tiltcard{
-display: none;    left: 30%;
-        top: 20%;
-    
+display: none;    
     }
-    .contactbutton{ 
-   
-      position: absolute;
-      top:70%;
-      left:36vw;}
-      .hometexc:\Users\Suisse\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\code\electron-sandbox\workbench\workbench.htmlt{
-display: flex;
-justify-content: center;        position: absolute;
-        top: 25%;
-       width: 90%;
-        font-size: 12px;
-        }
+    .contactbutton{
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
 
 }
-@media screen and (max-height:){.tiltcard{
-  display: none;   
+
+
+
+@media  (max-width:600px){
+  .wavyanimation .wave::before,
+.wavyanimation .wave::after{
+width: 400%;
+
+top: -25%;
+left: -350%;}
+      }
+
+      @media  (max-width:450px){
+        .wavyanimation .wave::before,
+      .wavyanimation .wave::after{
+      width: 600%;
       
-      }}
+      top: -25%;
+      left: -550%;}
+            }

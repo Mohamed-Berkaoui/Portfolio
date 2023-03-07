@@ -1,7 +1,7 @@
 import './Tesst.css'
 
 
-import { motion, useMotionValueEvent, useScroll, useTransform } from 'framer-motion'
+import { calcLength, motion, useMotionValueEvent, useScroll, useTransform } from 'framer-motion'
 import {  useRef, useState } from 'react'
 
 function Tesst() {
@@ -12,13 +12,13 @@ const [display,setDisplay]=useState('flex')
 
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-latest>100?setDisplay("none"):setDisplay("flex")  })
+latest>200?setDisplay("none"):setDisplay("flex")  })
 
-console.log(display)
-  const opacity = useTransform(scrollY, [0, 1], [1, 0]);
+console.log(window.innerWidth)
+  const opacity = useTransform(scrollY, [0, 10], [1, 0]);
 
-  const scale = useTransform(scrollY, [0, 1], [1, 1.1]);
-  const y = useTransform(scrollY, [0, 1], [0, 90]);
+  const scalee = useTransform(scrollY, [0, 1], [1, 1.5]);
+  const y = useTransform(scrollY, [0, 1], [0,window.innerWidth>500?400:200]);
 
 
 
@@ -29,7 +29,7 @@ console.log(display)
         ref={el}
         style={{
           opacity: opacity,
-        
+       scale:window.innerWidth>500? scalee:1,
            y: y,
           display:display
         }}
@@ -38,7 +38,7 @@ console.log(display)
 
 
         <motion.svg
-style={{scale:scale}}
+style={{ scale:window.innerWidth>500? scalee:1, display:display}}
 
           id="loader" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1445.67 1692.28"><motion.path
@@ -64,7 +64,7 @@ style={{scale:scale}}
 
         </motion.div>
         <motion.div style={{display:display}} initial={{ y: 0 }}
-          animate={{ y: 10 }}
+          animate={{ y: 20 }}
 
           transition={{ duration: 0.8, ease: 'easeInOut', repeat: Infinity }}
           id='scrolldown'>
@@ -87,8 +87,9 @@ style={{scale:scale}}
       </motion.div>
       <motion.div
         className="blur-mask"
-        style={{
-          opacity: opacity,
+        style={{ 
+          opacity: opacity,y:y,
+          scale:window.innerWidth>500? scalee:1,
           backdropFilter: 'blur(25px)',display:display
         }}
 

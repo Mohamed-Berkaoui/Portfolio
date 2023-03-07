@@ -7,7 +7,6 @@
         display: flex;
       width: 150px;
       height: 45px;
-      
        
     align-items: center; 
     justify-content: center;
@@ -17,12 +16,12 @@
     transition: all 0.3s ease-in ;
     
     }
-    .bottoncontact span{
+  #buttonspan{
       font-size: 0.8rem;
       letter-spacing: 1.5px;
       font-weight: 700;
       z-index: 11;
-    }
+color: var(--textcolor2);  }
     
    
     .bottoncontact .liquid{
@@ -52,20 +51,13 @@
       background: var(--backcolor1);
       animation: bottonanim 10s linear infinite;
     }
-   [data-ison="true"] .bottoncontact .liquid::before{
-      background:rgba(59, 52, 52, 0.61);
-    
-    }
+
     
     
     .bottoncontact .liquid::after{
       border-radius: 38%;
       background:rgba(204, 203, 203, 0.5);
       animation: bottonanim 10s linear infinite;
-    
-    }
-    [data-ison="true"] .bottoncontact .liquid::after{
-      background: rgba(119, 103, 103, 0.295);
     
     }
     @keyframes bottonanim{
