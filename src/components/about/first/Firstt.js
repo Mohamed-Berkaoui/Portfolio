@@ -79,7 +79,7 @@ latest>2000?setDisplay("none"):setDisplay("block")  })
               Now I focus on people and learning how they interact with websites, making sure they can achieve their goals leaving them satisfied and more likely to return as customers.
             </motion.h1>
           <motion.h1 style={{ fontSize: phonenumber, color: colortext }} id='phonenumber' >+216 22 495 056
-            <br /><br /><br /><br /><br />It's all about passion<br /><br /></motion.h1>
+            <br /><br /><br /><br /><br />It's all about passion</motion.h1>
           <motion.h2 style={{  color: colortext }}  id='text2'  >
         
             I am ambitious, ready to innovate,
