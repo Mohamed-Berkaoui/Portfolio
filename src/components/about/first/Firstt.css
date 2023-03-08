@@ -88,7 +88,7 @@ overflow: hidden;
 }
 .tvshow #phonenumber{
     padding-top: 10%;
-    padding-bottom:  25vh;
+    padding-bottom:  20vh;
     top: 0;
     right: 30px;text-align: center;
     transition: all 0.01s ease;
@@ -149,7 +149,7 @@ z-index: 20;
 transform: skewY(-2deg);
  }
  #text3 h1{ position: relative; z-index: 1000; transition: all 0.8s ease-out;
-font-size: 1.3rem;
+font-size: 1.5em;
 transform: skewY(-2deg);
 padding: 0% 5%;
 color: #000000;
@@ -341,7 +341,7 @@ left: 30%;
    
 }
 #text2{
-  font-size: 1.8em;
+  font-size: 1.7em;
 }
 
  
@@ -352,11 +352,11 @@ left: 45%;
 
 }
 @media (max-width:450px) {
-  .firstabout{font-size: 1.25rem;}
+  .firstabout{font-size: 1.2rem;}
  
 .infos{
   display: block;
-  height: 140vh;
+  height: 150vh;
 }
 .info2 img{
    
@@ -364,14 +364,4 @@ left: 45%;
 left: 50%;
  }
 }
-@media (max-width:420px) {
-  .firstabout{font-size: 1.25rem;}
- 
-.infos{
-  display: block;
-  height: 150vh;
-}
-.info2 img{
-   left: 90%;
- }
-}
+
