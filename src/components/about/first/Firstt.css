@@ -180,8 +180,8 @@ display: flex;
 justify-content: flex-end;
 }
 .info2 img{
-    transition: all 2s ease-out;
-    transition-delay:0.5s ;
+    transition: all 1s ease-out;
+    transition-delay:0s ;
     position: relative;
 height: 90%;
 top: 10%;}
@@ -361,7 +361,7 @@ left: 45%;
 .info2 img{
    
   top: -20%;
-left: 50%;
+left: 70%;
  }
 }
 
