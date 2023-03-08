@@ -22,7 +22,7 @@ const [display,setDisplay]=useState('flex')
 
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-latest>200?setDisplay("none"):setDisplay("flex")  })
+latest>100?setDisplay("none"):setDisplay("flex")  })
 
 console.log(window.innerWidth)
   const opacity = useTransform(scrollY, [0, 1], [1, 0]);

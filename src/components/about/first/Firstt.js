@@ -26,7 +26,7 @@ latest>2000?setDisplay("none"):setDisplay("block")  })
 
   const opacity = useTransform(scrollYProgress, [0.6, 0.601], [1, 0])
   const y = useTransform(scrollYProgress, [0.47, 0.65], ['0vh', '-100vh'])
-  const phonenumber = useTransform(scrollYProgress, [0.47, 0.55], ['1.5em', '3.5em'])
+  const phonenumber = useTransform(scrollYProgress, [0.47, 0.55], ['1.5em', '3.2em'])
 
   const rotate = useTransform(scrollYProgress, [0.35, 0.4], ['0deg', '6deg'])
   const rotatevdieo = useTransform(scrollYProgress, [0.35, 0.4], ['-6deg', '0deg'])
@@ -63,8 +63,8 @@ latest>2000?setDisplay("none"):setDisplay("block")  })
           
 
             <motion.img style={{ scale: scale, opacity: opacity, rotate: rotate, y: y,display:display1 }}  src={arcade} id="arcadeimg" />
-            <motion.video src={video} style={{ opacity: display ,rotate:rotatevdieo ,scale:scalevideo,y:yvideo}} autoPlay={true} muted loop />
-            <motion.img id='static' src={video2} style={{ opacity: display2 }} />
+            <motion.video src={video} style={{ opacity: display ,rotate:rotatevdieo ,scale:scalevideo,y:yvideo ,display:display1}} autoPlay={true} muted loop />
+            <motion.img id='static' src={video2} style={{ opacity: display2 ,display:display1 }} />
            
           </motion.div>
         </div>
@@ -81,57 +81,42 @@ latest>2000?setDisplay("none"):setDisplay("block")  })
           <motion.h1 style={{ fontSize: phonenumber, color: colortext }} id='phonenumber' >+216 22 495 056
             <br /><br /><br /><br /><br />It's all about passion<br /><br /></motion.h1>
           <motion.h2 style={{  color: colortext }}  id='text2'  >
-            I am ambitious,ready to innovate,
-            both in my private life and in my
-            professional life.Developing my career,
-            broadening my knowledge and refining
-            my skills are always my priority.
-            am ambitious,ready to innovate,
-            both in my private life and in my
-            professional life.Developing my career,
-            broadening my knowledge and refining
-            my skills are always my priority.
-            I am ambitious,ready to innovate,
-            both in my private life and in my
-            professional life.Developing my career,
-            broadening my knowledge and refining
-            my skills are always my priority.
-            am ambitious,ready to innovate,
-            both in my private life and in my
-            professional life.Developing my career,
-            broadening my knowledge and refining
-            my skills are always my priority.
-
-
-
-
+        
             I am ambitious, ready to innovate,
             both in my private life and in my
             professional life.Developing my career,
             broadening my knowledge and refining
             my skills are always my priority.
-            I am a ProfessionalWeb Developer. I have been doing my own freelance work for over five years now. If you're looking for a freelance web programmer, I think you'll be pleased with what I can offer.</motion.h2>
+            I am a ProfessionalWeb Developer. I have been doing my own freelance work for over five years now. If you're looking for a freelance web programmer, I think you'll be pleased with what I can offer.
+            <br/><br/>
+            I'm passionate about bringing both the technical and visual aspects of digital products to life.
+             User experience, beautiful pixels and writing clean accessible, human code matters to me.
+             I sweat the details. And as a follower of John Maeda’s Laws Of Simplicity, I agree that less is more.
+            <br/>
+            I'm happiest when I'm creating, learning, exploring and thinking about how to make things better
+            </motion.h2>
 
           <div id='text3'>
             <div className='innershadow innershadow1' ></div>
             <div className='innershadow innershadow2' ></div>
 
             <motion.img style={{ y: ydevimg }} src={devpic} alt='' />
-            <motion.h1  >
+            <motion.h1 id='paralextext' >
               I create successful responsive websites that are fast, easy to use, and built with best practices. The main area of my expertise is front-end development, HTML, CSS, JS, building small and medium web apps, custom plugins, features, animations, and coding interactive layouts.
             </motion.h1>
           </div>
 
           <div className='infos'>
             <div className='info1'>
-           <span className="myinformations" data-replace="30 years"><span>age</span></span>
+            <span className="myinformations myinformations1" data-replace="berkaouimed1@gmail.com"><span>E-mail </span></span>
+
+           <span className="myinformations myinformations1" data-replace="30 years"><span>age</span></span>
              
-              <span className="myinformations" data-replace="Tunisia"><span>Residence</span></span>
+              <span className="myinformations myinformations2" data-replace="Tunisia"><span>Residence</span></span>
 
             
-              <span className="myinformations" data-replace="beb souika, Tunis"><span>Address</span></span>
+              <span className="myinformations myinformations2" data-replace="beb souika, Tunis"><span>Address</span></span>
             
-              <span className="myinformations" data-replace="berkaouimed1@gmail.com"><span>E-mail </span></span>
             </div>
             <div ref={ref} className='info2'>
               <motion.img style={{ y: isInView ? 0 : 700 }} src={mypic} id='mypic' alt='' /></div>
