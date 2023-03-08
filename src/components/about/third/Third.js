@@ -16,7 +16,7 @@ function Second() {
 
   })
   const scale = useTransform(scrollYProgress, [0.8, 1], [1, 0.6]);
-  const opacity = useTransform(scrollYProgress, [0.76, 1], [1, 0.2])
+  const opacity = useTransform(scrollYProgress, [0.76, 1], [1, 0])
   const x = useTransform(scrollYProgress, [0.38, 0.67], ['50%', '-150%'])
 
   const whatido1 = useTransform(scrollYProgress, [0.34,0.344], [ -100,0])

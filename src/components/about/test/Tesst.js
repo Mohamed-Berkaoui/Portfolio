@@ -28,7 +28,7 @@ console.log(window.innerWidth)
   const opacity = useTransform(scrollY, [0, 1], [1, 0]);
 
   const scalee = useTransform(scrollY, [0, 1], [1,mobiledivice?1: 1.5]);
-  const y = useTransform(scrollY, [0, 1], [0,200]);
+  const y = useTransform(scrollY, [0, 1], [0,mobiledivice?0: 200]);
 
 
 
