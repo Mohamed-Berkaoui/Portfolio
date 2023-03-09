@@ -32,7 +32,7 @@ function Second() {
   const blur1 = useTransform(scrollYProgress, [0.38,0.53], [1,0.1])
   const blur2 = useTransform(scrollYProgress, [0.38,0.53,0.67], [0.1, 1,0.1])
   const blur3 = useTransform(scrollYProgress, [0.53,0.67], [0.1, 1])
-  const op = useTransform(scrollYProgress, [0.95,1], [0.1, 1])
+  const op = useTransform(scrollYProgress, [0.95,0.99], [0.2, 1])
 
 
   return (
