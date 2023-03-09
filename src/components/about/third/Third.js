@@ -7,6 +7,8 @@ import what3 from '../../../assets/what3.png'
 import lastback1 from '../../../assets/lastback4.png'
 import lastback2 from '../../../assets/lastback3.png'
 import ContactBar from '../../contactbar/ContactBar';
+import frontimg from "../../../assets/front.png"
+import backimg from "../../../assets/back.png"
 
 function Second() {
   const carouselRef = useRef(null)
@@ -17,15 +19,15 @@ function Second() {
   })
   const scale = useTransform(scrollYProgress, [0.8, 1], [1, 0.6]);
   const opacity = useTransform(scrollYProgress, [0.76, 1], [1, 0])
-  const x = useTransform(scrollYProgress, [0.38, 0.67], ['50%', '-150%'])
+  const x = useTransform(scrollYProgress, [0.38, 0.67], ['32%', '-135%'])
 
   const whatido1 = useTransform(scrollYProgress, [0.34,0.344], [ -100,0])
   const whatido2 = useTransform(scrollYProgress, [0.34,0.344], [ 100,0])
   const whatido3 = useTransform(scrollYProgress, [0.34,0.344], [ 0,1])
 
 
-  const scale1 = useTransform(scrollYProgress, [0.38,0.53], [ 1,0.5])
-  const scale2 = useTransform(scrollYProgress, [0.38,0.54,0.67], [0.5, 1,0.5])
+  const scale1 = useTransform(scrollYProgress, [0.38,0.5], [ 1,0.5])
+  const scale2 = useTransform(scrollYProgress, [0.38,0.525,0.67], [0.5, 1,0.5])
   const scale3 = useTransform(scrollYProgress, [0.54,0.67], [0.5, 1])
   const blur1 = useTransform(scrollYProgress, [0.38,0.53], [1,0.1])
   const blur2 = useTransform(scrollYProgress, [0.38,0.53,0.67], [0.1, 1,0.1])
@@ -49,16 +51,18 @@ function Second() {
  </div>
               <motion.div style={{ x: x,scale:scale1,opacity:blur1}} className='slider slider1'>
 
-                <h1>FRONTEND APPS</h1>
+                <h1>FRONTEND APPS</h1><br/>
                 <p>
-                Build client-side applications with modern features like SPA and maintain semantic coding style among other best practices for SEO optimisation. Use modern tech such as reactJS, TailwindCSS...
+                Build client-side applications with modern features  and maintain semantic coding style among other best practices for SEO optimisation. Use modern tech such as reactJS, TailwindCSS...
              </p> 
+             <img src={frontimg} alt=''/>
              </motion.div>
               <motion.div style={{ x: x,scale:scale2,opacity:blur2 }} className='slider slider2'>
-                <h1>BACKEND APPS</h1>
+                <h1>BACKEND APPS</h1><br/><br/>
                 <p>
-                Build scalable and maintainable server applications using cutting-edge technologies such as Nest.js, Docker, and MongoDB
-             </p> </motion.div>
+                Build scalable and maintainable server applications using cutting-edge technologies such as Node js and MongoDB             </p> 
+             <img src={backimg} alt=''/>
+</motion.div>
               <motion.div style={{ x: x,scale:scale3,opacity:blur3}} className='slider slider3'>
                 <h1>
                 NATIVE APPS

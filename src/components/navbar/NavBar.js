@@ -1,5 +1,4 @@
 import './NavBar.css'
-import logo1 from "../../assets/logo.png"
 import logo2 from "../../assets/logo2.png"
 
 function NavBar(props) {
@@ -13,7 +12,7 @@ function NavBar(props) {
     <div className="navbar">
       <div  className="menu">
         <div className="logo" >
-        <img alt='mylogo' className='logoimg' src={props.ison ? logo1 : logo2} />
+        <img alt='mylogo' className='logoimg' src={ logo2} />
 
         </div>
         <div className="logo">

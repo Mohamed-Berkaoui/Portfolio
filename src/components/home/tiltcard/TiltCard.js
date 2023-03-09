@@ -1,8 +1,8 @@
 import   './TiltCard.css'
 import React, { useEffect, useRef } from 'react';
 import VanillaTilt from 'vanilla-tilt';
-import logo1 from '../../../assets/yogi.png'
-import logo2 from '../../../assets/yogi2.png'
+import logo2 from '../../../assets/yogi.png'
+import { Link } from 'react-router-dom';
 
 
 
@@ -15,22 +15,21 @@ useEffect(() => {
   VanillaTilt.init(tilt.current, options);
 }, [options]);
   return (
+    <Link style={{textDecoration:'none'}} to={'/about'}  >
     <div ref={tilt} {...rest}  class="aboutme">
 
-        <div className='topname topname1'>
-        <p>B.Mohamed</p>
-          
-        </div>
-        <div className='topname topname2'><p>About ME</p></div>
-    
+<div className="ribbon"><span>About me</span></div>
         <div className='mylogo'>
-          <img alt='' src={props.ison ?logo2:logo1}/></div>
+          <img alt='' src={ logo2}/></div>
           <div className='discreptionbox'>
-            <h4>[effect ]</h4>
-            <p>discreptionbox here
+           
+            <p>I’m probably the most passionate Web Developer you will ever get to work with. 
+              If you have a great project that needs some amazing skills, I’m your guy
             </p>
+      
+            <h4>LET'S GOSSIP <span>{">>"}</span> </h4>
           </div>
-    </div>  )
+    </div> </Link> )
 }
 
 export default TiltCard

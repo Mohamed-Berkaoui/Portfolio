@@ -24,7 +24,7 @@ font-size: 18px;
       height: max-content;
     }
   .contactbutton{ 
-    position: relative;
+    position: absolute;
     top:65vh;
     left:20%;
     text-decoration: none;
@@ -51,10 +51,7 @@ background: rgba(3, 25, 43, 0.452);
 transition: all 0.5s ease;
 
 }
-[data-ison="true"]  .wavyanimation .wave{
-background: rgba(0, 0, 0, 0.514);
 
-}
 .wavyanimation .wave::before,
 .wavyanimation .wave::after{
 content: '';
@@ -71,10 +68,7 @@ border-radius: 47%;
 background:rgba(211, 211, 211, 0.408);
 animation: waves 15s linear infinite;
 }
-[data-ison="true"] .wavyanimation .wave::before{
-background: rgba(43, 51, 59, 0.4);
 
-}
 
 
 .wavyanimation .wave::after{
@@ -83,9 +77,8 @@ background: var(--backcolor2);
 animation: waves 15s linear infinite;
 
 }
-[data-ison="true"] .wavyanimation .wave::after{
-background: var(--backcolor1);
-
+.discreption{
+  display: none;
 }
 @keyframes waves{
 0%{
@@ -103,17 +96,30 @@ background: var(--backcolor1);
   .tiltcard{
 display: none;    
     }
+    .hometext{top: 22%;}
+    .discreption{
+      display: block;
+      position: absolute;
+      text-align: justify;
+      font-size: 1em;
+padding: 5%;   
+   top: 40%;
+      height: max-content;
+      z-index: 2000;
+    }
+    .discreption h4{
+      font-size: 1.4rem;
+      color: #474747;
+      
+    }
     .contactbutton{
       left: 50%;
       transform: translateX(-50%);
+      top:70%;
     }
   
 
-}
 
-
-
-@media  (max-width:600px){
   .wavyanimation .wave::before,
 .wavyanimation .wave::after{
 width: 400%;

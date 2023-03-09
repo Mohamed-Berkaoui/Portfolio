@@ -33,7 +33,7 @@ position: relative;
 
     z-index: 10;
  
-
+background-color: rgba(165, 173, 177,0.6);
   color: var(--textcolor2);
 
 
@@ -134,23 +134,3 @@ position: relative;
 .container.active .main:hover {
   transform: perspective(1300px) rotateY(20deg) translateZ(28vw) scale(0.5);
 }
-/*
-@media (max-width: 500px) {
-
-  .container.active .main {
-    animation: main-animation 0.8s ease;
-    cursor: pointer;
-    transform: perspective(2500px) rotateY(10deg) translateZ(310px) scale(0.5);
-  }
-  
-  @keyframes main-animation {
-    from {
-      transform: translate(0);
-    }
-  
-    to {
-      transform: perspective(2500px) rotateY(10deg) translateZ(310px) scale(0.5);
-    }
-  }
-  
-} */

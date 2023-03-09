@@ -20,10 +20,10 @@ function Home(props) {
 
   return (
 
-    <motion.div   initial={{ opacity:0,scale:2, }} 
-    animate={{opacity:1,scale:1}} 
-    exit={{ opacity:0,scale:2}}
-    transition={{ duration: 0.5 ,ease:"easeInOut" }} >
+    <motion.div   initial={{ opacity:0 }} 
+    animate={{opacity:1}} 
+    exit={{ opacity:0}}
+    transition={{ duration: 0.8,type:"spring" ,ease:"easeInOut" }} >
         <div className="overlay">
           <div  className='wavyanimation'>
             <div className='wave'></div>
@@ -33,6 +33,17 @@ function Home(props) {
           <motion.div initial={{ opacity:0,y:50 }} animate={{opacity:1,y:0}}  transition={{delay:1, duration: 0.5 }} className='hometext'>
           <HomeText  />
           </motion.div>
+
+
+          <motion.div initial={{ opacity:0,y:50 }} animate={{opacity:1,y:0}}  transition={{delay:1.5, duration: 0.5 }} className='discreption'>
+           
+           <p>I’m probably the most passionate Web Developer you will ever get to work with. 
+             If you have a great project that needs some amazing skills, I’m your guy!
+           </p>
+     
+        <Link  style={{textDecoration:'none'}} to={'/about'}>
+   <h4>CATCH A SIGHT <span>{">>"}</span> </h4></Link>
+         </motion.div>
 
           <motion.div initial={{ opacity:0,y:50 }} animate={{opacity:1,y:0}}  transition={{delay:1, duration: 0.5 }} className='tiltcard'>
           <TiltCard ison={props.ison} options={options} /> 

@@ -20,14 +20,17 @@ function About(props) {
     }, 4000);
 
       return (
-<>
+    
+        <motion.div initial={{ opacity:0}} 
+        animate={{opacity:1}} 
+        exit={{ opacity:0}}
+        transition={{ duration: 0.8,type:"spring" ,ease:"easeInOut" }} >
 {!props.res?(<div id='placeholder'><Menu/> <img src={img} alt=''/></div>):(
 
         <>
             <AnimatePresence>
 {loading ?null: (
-    
-    
+
         <Placeholder/>
       ) }
       </AnimatePresence>
@@ -46,7 +49,7 @@ function About(props) {
 
             </motion.div></>
        )}
-       </>)
+       </motion.div>)
 }
 
 export default About

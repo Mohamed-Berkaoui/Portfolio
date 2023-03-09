@@ -1,6 +1,6 @@
 import './Firstt.css'
 import arcade from "../../../assets/12.png"
-import { motion, useInView, useScroll, useTransform,useMotionValueEvent } from 'framer-motion'
+import { motion, useScroll, useTransform,useMotionValueEvent } from 'framer-motion'
 import {  useRef, useState } from 'react'
 import video from '../../../assets/video.mp4'
 import video2 from '../../../assets/static-tv.gif'
@@ -20,7 +20,7 @@ function Firstt() {
   const { scrollY} = useScroll()
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-latest>2000?setDisplay("none"):setDisplay("block")  })
+latest>2600?setDisplay("none"):setDisplay("block")  })
 
   const scale = useTransform(scrollYProgress, [0.35,0.4,0.47, 0.6], [1,1.2,1.2,10])
 
@@ -46,9 +46,6 @@ latest>2000?setDisplay("none"):setDisplay("block")  })
 
   const ydevimg = useTransform(scrollYProgress, [0.7, 1], [-490, 490])
 
-
-  const ref = useRef(null)
-  const isInView = useInView(ref)
 
   return (
 
@@ -118,8 +115,10 @@ latest>2000?setDisplay("none"):setDisplay("block")  })
               <span className="myinformations myinformations2" data-replace="beb souika, Tunis"><span>Address</span></span>
             
             </div>
-            <div ref={ref} className='info2'>
-              <motion.img style={{ y: isInView ? 0 : 700 }} src={mypic} id='mypic' alt='' /></div>
+            <div  className='info2'>
+              <motion.img  initial={{y:400}}
+  whileInView={{y:0}}
+  viewport={{ once: true }} src={mypic} id='mypic' alt='' /></div>
           </div>
         </motion.div>
       </div>
