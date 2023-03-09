@@ -181,7 +181,6 @@ justify-content: flex-end;
 }
 .info2 img{
     transition: all 1s ease-out;
-    transition-delay:0.2s ;
     position: relative;
 height: 90%;
 top: 10%;}
