@@ -11,13 +11,13 @@ function HomeText() {
        new Typed(el.current, {
         strings: ["WEB DEVELOPER.^800", "WEB DESIGNER.^800", "GRAPHIC DESIGNER.^800", "FULLSTACK DEVELOPER.^1000"],
         backDelay: 10,
-        startDelay: 800,
+        startDelay: 200,
   
         typeSpeed: 30,
         backSpeed: 30,
         smartBackspace: true,
         loop: true,
-        showCursor: false
+        showCursor: true
       });
     }, [el])
   return (
