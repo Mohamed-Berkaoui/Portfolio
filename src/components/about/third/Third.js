@@ -43,11 +43,11 @@ function Second() {
   const blur1 = useTransform(scrollYProgress, [0.38, 0.53], [1, 0.1])
   const blur2 = useTransform(scrollYProgress, [0.38, 0.53, 0.67], [0.1, 1, 0.1])
   const blur3 = useTransform(scrollYProgress, [0.53, 0.67], [0.1, 1])
-  const op = useTransform(scrollYProgress, [0.9, 0.995], [0.3, 1])
-  const stars = useTransform(scrollYProgress, [0.99, 0.995], [0, 0.5])
-  const xdev = useTransform(scrollYProgress, [0.99, 0.991], ["-50vw", '0vw'])
-  const xdis = useTransform(scrollYProgress, [0.99, 0.991], ["50vw", '0vw'])
-  const opdev = useTransform(scrollYProgress, [0.99, 0.991], [0, 0.8])
+  const op = useTransform(scrollYProgress, [0.97, 0.98], [0.3, 1])
+  const stars = useTransform(scrollYProgress, [0.97, 0.975], [0, 0.5])
+  const xdev = useTransform(scrollYProgress, [0.97, 0.971], ["-50vw", '0vw'])
+  const xdis = useTransform(scrollYProgress, [0.97, 0.971], ["50vw", '0vw'])
+  const opdev = useTransform(scrollYProgress, [0.97, 0.971], [0, 0.8])
 
 
   return (
