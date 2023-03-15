@@ -116,7 +116,7 @@ function Firstt() {
           <motion.img id='backpc' style={{ y: ydevimg }} src={devpic} alt='' />
          <div className='iconss iconss1'> <motion.img  src={location} alt='' /><h2>TUNISIA</h2></div>
          <div className='iconss iconss2'><motion.img   src={location2} alt='' /><h2>BEB SOUIKA,TUNIS</h2></div>
-         <div className='iconss iconss3'><motion.img   src={email} alt='' /><h2>BERKAOUIMED@OUTLOOK.FR</h2></div>
+         <div className='iconss iconss3'><motion.img   src={email} alt='' /><h2>BERKAOUIMEDEV@GMAIL.COM</h2></div>
 
 
         </div>
