@@ -1,13 +1,72 @@
 .contactbar{
-    position: absolute;
-    bottom: 3%;
-  
-    height: 7vh;
-    width: 100%;
-    opacity: 0.6;
-;
-z-index: 10000000000;
+  position: absolute;
+display: flex;
+width: 100vw;
+height:50px;
+bottom: -50px;
+z-index: 1000000000000000000000000000;
+
+
 }
+.socialmediabar{
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background:linear-gradient(to top,#566464ab,#b2d5da9a);
+  border: 1px solid rgba(0, 0, 0, 0.363);
+}
+.dragbtn{
+  position: absolute;
+  font-size: 0.5rem;
+display: flex;
+align-items: center;
+justify-content: center;
+width:200px;
+  height: 50px;
+  top: -50px;
+  color: azure;
+  box-shadow:inset 0px 1px 18px 0px rgba(2, 138, 161, 0.486);
+  background-color:rgba(33, 44, 46, 0.479);
+left: 50%;
+clip-path: polygon(25% 0, 75% 0, 100% 100%, 0% 100%);
+
+transform: translateX(-50%);}
+.dragbtn #drag{
+  position: relative;
+width: 25%;
+opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .socialmedialogos{
 
@@ -47,63 +106,6 @@ scale:1.1;
 opacity: 1 !important ;
 z-index: 20;
 
-}
-.logosocial::after{
-    content:'';
-    position:relative;
-    top: 0;
-    left:0;
-    width:100px;
-    height:100px;
-    background:#59b4ff96;
-    transition:0.4s;
-    transform-origin:right;
-    transform:scaleX(0);
-    z-index:-1;
-  }
-  
-  .logosocial:hover::after{
-    transition:transform 0.5s;
-    transform-origin:left;
-    transform:scaleX(1);
-  }
 
 
-  
-.line{
-  position: absolute;
-  width: 80%;
-  margin-left: 10%;
-  height: 3px;
-  top: 0;
-  left: 0%;
-  background: rgba(212, 212, 212, 0.329);
-  overflow: hidden;
-}
-  .line::after{
-    content: '';
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 10vw;
-    top: 0%;
-    left: 0;
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #ffffff 75%, #ffffff 100%);
-    animation: drop 5s infinite;
-    animation-fill-mode: forwards;
-    animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
-  
-}
-@keyframes drop{
-  0%{
-    left: -20%}
-  100%{
-    left: 100%
-}
-}
-
-@media (max-width:500px) {
-  .contactbar{
-    bottom: 3%;
-  }
 }

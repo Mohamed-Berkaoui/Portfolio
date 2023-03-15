@@ -17,7 +17,6 @@ function Firstt() {
   const refrence = useRef(null)
   const ref = useRef(null);
   const isInView = useInView(ref);
-  console.log(isInView)
 
   const { scrollYProgress } = useScroll({
     target: refrence,
@@ -48,10 +47,11 @@ function Firstt() {
 
   const display2 = useTransform(scrollYProgress, [0.409, 0.41,0.424, 0.425], [0, 1,1, 0])
 
-  const back = useTransform(scrollYProgress, [0.5, 0.6], ["rgb(40,40,40)", "rgb(255,255,255)"])
+  const back = useTransform(scrollYProgress, [0.5, 0.6], ["rgb(40,40,40)", "rgb(220,220,220)"])
 
 
-  const h1y = useTransform(scrollYProgress, [0.2, 0.45], [window.innerWidth > 500 ? '180vh' : '120vh', '60vh'])
+  const h1y = useTransform(scrollYProgress, [0.2, 0.35], [ '130vh', '63vh'])
+  const hadearop = useTransform(scrollYProgress, [0.25,window.innerWidth>700?0.29: 0.32], [1, 0])
 
   const colortext = useTransform(scrollYProgress, [0.5, 0.51], ['rgb(255,255,255)', 'rgb(0,0,0)'])
 
@@ -76,7 +76,7 @@ function Firstt() {
 
         </motion.div>
       </div>
-
+<motion.h1 style={{opacity:hadearop}} id='headtext'>“choose a job you<br/> love and you will<br/> never have to work<br/> a day in your life.”</motion.h1>
       <motion.div style={{ background: back }} className='tvshow'>
         <motion.h1 style={{ y: h1y }} id='h1'>
           I've always loved technology. From a young age, technology has interested me.I'm like most children play video games of some kind, from tetris to spyro, crash bandicoot to final fantasy, But also  loved playing with computers, my interest didn't stop just at entertainment.
@@ -114,9 +114,9 @@ function Firstt() {
           <div className='innershadow innershadow2' ></div>
 
           <motion.img id='backpc' style={{ y: ydevimg }} src={devpic} alt='' />
-         <div className='iconss'> <motion.img  src={location} alt='' /><h2>TUNISIA</h2></div>
-         <div className='iconss'><motion.img   src={location2} alt='' /><h2>BEB SOUIKA,TUNIS</h2></div>
-         <div className='iconss'><motion.img   src={email} alt='' /><h2>BERKAOUIMED@OUTLOOK.FR</h2></div>
+         <div className='iconss iconss1'> <motion.img  src={location} alt='' /><h2>TUNISIA</h2></div>
+         <div className='iconss iconss2'><motion.img   src={location2} alt='' /><h2>BEB SOUIKA,TUNIS</h2></div>
+         <div className='iconss iconss3'><motion.img   src={email} alt='' /><h2>BERKAOUIMED@OUTLOOK.FR</h2></div>
 
 
         </div>
@@ -125,7 +125,7 @@ function Firstt() {
         <div    className='backsvg'>
           <motion.svg xmlns="http://www.w3.org/2000/svg" version="1.1" xlink="http://www.w3.org/1999/xlink" svgjs="http://svgjs.dev/svgjs" viewBox="0 0 1422 800">
 
-            <g stroke-width="2" stroke="url(#oooscillate-grad)" fill="none" stroke-linecap="round">
+            <g strokeWidth="2" stroke="url(#oooscillate-grad)" fill="none"             strokeLinecap="round">
               <motion.path initial={{ pathLength: 0, fill: "none" }}
                 animate={isInView&&{pathLength: 1, fill: 'none' }}
                 
@@ -335,13 +335,13 @@ a freelancer can make it at a very reasonable price.the key of success for a fre
 
   <li><img src={correcticon} alt=''/>
 AN ADAPTED SERVICE</li>
-  <li><img src={correcticon} alt=''/>CHEAPER SERVICES</li>
-  <li><img src={correcticon} alt=''/>TIME SAVING</li>
   <li><img src={correcticon} alt=''/>A PRIVILEGED CONTACT</li>
+  <li><img src={correcticon} alt=''/>CHEAPER COSTS</li>
+  <li><img src={correcticon} alt=''/>TIME SAVING</li>
 
 </p> </div>
           <div className='info2'>
-            <motion.img initial={{ y: 400 }}
+            <motion.img initial={{ y: 300 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }} src={mypic} id='mypic' alt='' /></div>
         </motion.div>

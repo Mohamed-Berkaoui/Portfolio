@@ -4,7 +4,7 @@ width: 100vw;
 height: 500vh;
 top: 0%;
 left: 0;
-font-size:2rem ;
+font-size:1.9rem;
 }
  .arcade{
     object-fit: cover;
@@ -36,7 +36,17 @@ position: absolute;
 top: 0;
 
 }
+#headtext{
+position:absolute;
+top: 9%;
+font-variant: small-caps;
+color: #fff;
+transition: all 0.3s linear;
 
+z-index: 100;
+font-size: 2em;
+text-shadow: 0 0 5px black;
+}
 
 
  #h1{
@@ -85,9 +95,10 @@ overflow: hidden;
 
 }
 .tvshow #phonenumber{
-    padding-top: 10%;
+    padding-top: 20vh;
     padding-bottom:  20vh;
     top: 0;
+    
     right: 30px;
     text-align: center;
     transition: all 0.2s ease-out;
@@ -102,7 +113,7 @@ font-weight: 500;
 text-align: justify;
 color: rgb(0, 0, 0);
 transition: all 0.1s linear;
-font-size:1.4em ;
+font-size:1.55em ;
 overflow: hidden;
 
 
@@ -150,7 +161,8 @@ transform: skewY(-3deg);
  }
  .iconss{
   position: relative;
-  width: 100%;
+  opacity: 0.7;
+  width: 30%;
   height: 100%;
   transform: skewY(-3deg);
   display: flex;
@@ -158,7 +170,7 @@ transform: skewY(-3deg);
   align-items: center;
   justify-content: center;
   color: #000000;
-  font-size: 1em;
+  font-size: 0.7em;
   z-index: 200000000000000000000;
  }
  .iconss img{
@@ -173,11 +185,10 @@ transform: skewY(-3deg);
     color: black;
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     align-items: center;
-    font-size: 1.5rem;
-    background: linear-gradient(to top, #8a8a8a, #ffffffef);    
-  
+    background: linear-gradient(to top, #3f3f3f, rgb(220,220,220));    
+  bottom: 0;
     padding-top: 2%;
 }
 .backsvg{
@@ -190,13 +201,13 @@ transform: skewY(-3deg);
 .info2{
     position: relative;
 height:100%;
-width:60%;
+width:40%;
 z-index: 0;
 transition: all 0.1s linear;
 display: flex;
 justify-content: flex-end;
 }
-.info2 img{
+.info2  #mypic{
     transition: all 1s ease-out;
     position: relative;
     display: block;
@@ -206,18 +217,18 @@ top: 10%;}
     position: relative;
   left: 5%;
     height: 100%;
+    width: 150%;
    z-index: 0;
     transition: all 0.01s linear;
     display: flex;
     flex-direction: column;
     justify-content: center;
     letter-spacing: 2px;
-    font-size: 1rem;
+    font-size: 1em;
 
 
 }
 .info1 h1{
-  font-size: 2.5em;
   font-weight: 700;
   font-variant:small-caps ;
 
@@ -236,7 +247,7 @@ font-size: 0.7em;
 list-style: none;
 display: flex;
 align-items: center;
-padding-left: 15%;}
+padding-left: 5%;}
 .info1 p li img{
 
   padding-right: 2%;}
@@ -287,9 +298,9 @@ cursor: default;  }
   .myinformations:hover span {
     transform: translate3d(0, -100%, 0);
   }
-  /*
+ 
   @media (max-width:1150px) {
-    .firstabout{font-size: 1.8rem;}
+    .firstabout{font-size: 1.6rem;}
     .arcade video{
       margin-top:14vh;
       height: 27vh;
@@ -297,120 +308,102 @@ cursor: default;  }
     .info2 img{
       left: 10%;
     }
+    #mypic{ left: 20%;}
 
   }
 
 
 
   @media (max-width:900px) {
-    .firstabout{font-size: 1.9rem;}
+    .firstabout{font-size: 1.45rem;}
 
     .arcade video{
       margin-top:13vh;
       height: 24vh;
     }
     #h1{padding: 0 5%;}
-    #text2{
-      font-size: 1.6em;
-    }
-    #text3 h1{
-      font-size: 1.7em;
-    }
-    .infos{
-      height: 140vh;
-    }
-    .info2{
-      width: 50%;
-    }
-    .info2 img{
-height: 80%;  
-top: 20%; 
-left: 20%; }
+    #mypic{ left: 60%;}
+  
   }
-  @media (max-width:760px) {
-    .info2 img{
-   
-      left: 36%; }
-  }
+
+
+
+
 
 @media (max-width:700px) {
-    .firstabout{font-size: 1.6rem;}
-    .tvshow #phonenumber{
-      padding-top: 30%;
-     
-  }
-  #h1{
-    font-size: 2em;
-  }
-  .info2 img{
-   
-    left: 50%; }
+  .firstabout{font-size: 1.35rem;}
 
-  #text2{
-    font-size: 1.8em;
-  }
+#mypic{ left: 80%;}
+  
 }
 @media (max-width:600px) {
-  .firstabout{font-size: 1.5rem;}
-  #text3 h1{
-font-size: 1.75em;
-  }
+
   .infos{
     display: block;
-    height: 135vh;
   }
   .info1{
-    height: 50%;
+    height: 70%;
+    width: 90%;
 
 }
 .info2{
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 100%;
-}
-.info2 img{
-   
-  top: -20%;
-left: 30%;
- }
-
-.myinformations2{
-
-  top: -35%;
-  left: 50%;
+ height: 50%;
 }
 
 
+#mypic{
+  top: 0;
+  z-index: 2000000000000000000000000;
+  left: 0;
+}
 
+.backsvg{
+  transform:rotate(90deg) ;
+  width: 140vh;
+  height: 100vw;
+left: -40%;}
 
 
 
 }
 
 @media (max-width:550px) {
-  .tvshow #phonenumber{
-    padding-top: 30%;
-   
+  .firstabout{font-size: 1.25rem;}
+
+
+.iconss{
+  position: absolute;
+  height: max-content;
+  width: 50%;
 }
-#text2{
-  font-size: 1.8em;
-}
-.infos{
-  display: block;
-  height: 150vh;
-}
+.iconss img{
+  width: 40%;
+ }
+.iconss1{top: 15%;
+left: 0;}
+.iconss2{top:  15%;
+  right:  0;}
+  .iconss3{bottom:  15%;
+  }
+#text3{
+  position: relative;
+
 
  
-.info2 img{
-   
-left: 30%;
- }
+  display: flex;
+  margin-bottom: 1%;
+  
+ 
+  }
+
 
 }
 @media (max-width:450px) {
   .firstabout{font-size: 1.2rem;}
-  .infos{
-    height: 155vh;
-  }
+
 
 .info2 img{
    
@@ -418,8 +411,9 @@ left: 30%;
 left: 100%;
  }
 }
-@media (max-width:350px) {
-  .firstabout{font-size: 1rem;}
+
+@media (max-width:380px) {
+  .firstabout{font-size: 1.18rem;}
  
 
 .info2 img{
@@ -430,51 +424,35 @@ left: 100%;
 }
 
 
+@media (max-width:300px) {
+  .firstabout{font-size: 1rem;}}
+ 
+
 
 @media (min-height:820px) {
-  .firstabout{font-size: 1.8rem;}
-  #h1{
-    font-size: 1.5em;
-  }
-  #text2{
-    font-size: 1.5em;
-  }
+  .firstabout{font-size: 1.35rem;}
+  #h1{padding: 0 5%;}
+
+}
+@media (min-height:880px) {
+  .firstabout{font-size: 1.43rem;}
+ 
 }
 
 
 @media (min-height:950px) {
   .firstabout{font-size: 1.7rem;}
 
-  .infos{
-    display: block;
-    height: 150vh;
-  }
-  .info1{
-    height: 50%;
+
+
 
 }
-.info2{
-  width: 100%;
-  height: 100%;
-}
-.info2 img{
-   
-  top: -20%;
-left: 70%;
- }
-
-.myinformations2{
-
-  top: -35%;
-  left: 50%;
-}
-}*/
 
 @media (min-height:1000px) {
-  .firstabout{font-size: 2.9rem;}
+  .firstabout{font-size: 2.1rem;}
+  #mypic{left: 155%;}}
+
+  @media (min-height:1200px) {
+    .firstabout{font-size: 2.45rem;}
+    #mypic{left: 155%;}}
   
-}
-@media (min-height:1300px) {
-  .firstabout{font-size: 3.4rem;}
-  
-}

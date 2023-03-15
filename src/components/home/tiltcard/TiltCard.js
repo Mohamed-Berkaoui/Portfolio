@@ -16,7 +16,7 @@ useEffect(() => {
 }, [options]);
   return (
     <Link style={{textDecoration:'none'}} to={'/about'}  >
-    <div ref={tilt} {...rest}  class="aboutme">
+    <div ref={tilt} {...rest}  className="aboutme">
 
 <div className="ribbon"><span>About me</span></div>
         <div className='mylogo'>

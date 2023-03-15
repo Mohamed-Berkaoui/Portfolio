@@ -1,15 +1,32 @@
 .contact {
+    position: relative;
     width: 100%;
-    overflow: hidden;
-    height: 100vh;
+    overflow-y: hidden;
+    max-height: 100vh;
+    min-height: 550px;
 
 
+}
+.succses{
+    position: absolute;
+    background-color: rgba(234, 255, 238, 0.274);
+    border: green;
+    box-shadow: 0 0 5px green;
+    border-radius: 5px;
+    height: 30%;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50%;
+    font-size:2em;
+display: flex;
+justify-content: center;
+align-items: center;    z-index: 2000000000000000000000;
 }
 
 .contact .contactcontainer {
     height: 100vh;
     overflow: hidden;
-    min-height: 700px;
     display: flex;
     background-color: var(--backcolor2);
 
@@ -78,11 +95,11 @@ width: 100%;
 
 .contact-input {
     width: 100%;
-    background-color: rgb(211, 210, 210);
+    background-color: rgb(233, 231, 216);
     padding: 1.5rem 1.35rem calc(0.75rem - 2px) 1.35rem;
     outline: none;
     font-family: inherit;
-    border-radius: 5px;
+    border-radius:2px;
     color: rgb(0, 0, 0);
     font-weight: 600;
     font-size: 0.95 rem;
@@ -154,11 +171,8 @@ textarea.contact-input~.icon {
 }
 
 .contact-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 1rem;
-    margin-top: 1rem;
-    width: 100%;
+   justify-self: center;
+    width:50%;
     grid-column: span 2;
     position: relative;
     z-index: 10;
@@ -215,7 +229,7 @@ left: -100%;
 
 .wave-wrap .wave {
     position: absolute;
-    height: 175%;
+    height:182%;
    top: 0;
     left:50%;
     pointer-events: none;
@@ -225,7 +239,7 @@ left: -100%;
 
 
 #wave {
-    fill: rgb(165, 173, 177);
+    fill: rgb(150, 167, 175);
     height: 100%;
 
 }
@@ -239,18 +253,22 @@ left: -100%;
     height: 200%;
     color: #000;
     border: none;
-    background-color: rgb(214, 214, 214);
+    background-color: rgba(60, 105, 119, 0.555);
     box-shadow: 0px 0px 2px black;
     width: 100%;
-    font-size: 1rem;
     cursor: pointer;
+    font-weight: 800;
     transition: 0.2s;
     z-index: 7;
+    box-shadow: 0 0 5px black;
+    transition: all 0.05s linear;
 }
 
 .btn:hover {
-    background-color: gray;
-    scale: 0.95;
+    background-color: rgb(105, 143, 168);
+    scale: 1.05;
+    box-shadow: 2px 2px 5px black;
+
 
 }
 
@@ -261,7 +279,7 @@ left: -100%;
     height: 2px;
     position: absolute;
     transition: all 0.2s linear;
-    background: linear-gradient(to left, blue, red);
+    background: linear-gradient(to left, rgb(51, 87, 121), rgb(58, 22, 22));
 }
 
 .btn input {
@@ -298,7 +316,7 @@ left: -100%;
     height: 0;
     position: absolute;
     transition: all 0.2s linear;
-    background: linear-gradient(to top, blue, red);
+    background: linear-gradient(to top,  rgb(51, 87, 121), rgb(58, 22, 22));
 }
 
 .btn::before,
@@ -347,10 +365,7 @@ left: -100%;
     opacity: 0;
 }
 
-.btn.upload {
-    position: relative;
-    background-color: aqua;
-}
+
 @media (max-width:1100px) {
     .wave-wrap{left: -120%;}
 
@@ -386,6 +401,10 @@ font-size:2.2rem;
     .wave-wrap{left: -175%;}
 
 }
+@media (max-width: 620px) {
+    .wave-wrap{left: -185%;}
+
+}
 
 
 @media (max-width: 570px) {
@@ -412,4 +431,13 @@ font-size:2.2rem;
     .contact-buttons{
     grid-template-columns: 1fr;
     row-gap: 2rem;}
+    }
+
+
+    @media  (min-height: 1000px){
+
+
+        .right{display: none;}
+
+.left{top: 10%;}
     }

@@ -1,8 +1,9 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion'
 import emailjs from '@emailjs/browser';
 
 import './contact.css'
+import ContactBar from '../contactbar/ContactBar';
 
 function Contact() {
   const [focus1, Setfocus1] = useState(false)
@@ -17,24 +18,25 @@ function Contact() {
 
   const [fname, SetFname] = useState("")
 
-  const Firstname = (e) => {    e.preventDefault();
+  const Firstname = (e) => {    
     SetFname(e.target.value) }
 
   const [lname, SetLname] = useState("")
 
-  const Lastname = (e) => {    e.preventDefault();
+  const Lastname = (e) => {    
     SetLname(e.target.value) }
 
   const [email, SetEmail] = useState("")
 
-  const Email = (e) => {     e.preventDefault();
+  const Email = (e) => {     
     SetEmail(e.target.value) }
 
   const [message, SetMessage] = useState("")
 
-  const Message = (e) => {     e.preventDefault();
+  const Message = (e) => {     
     SetMessage(e.target.value) }
 
+    const [status, setStatus] = useState('');
 
 
 
@@ -46,20 +48,33 @@ function Contact() {
 
     emailjs.sendForm('service_b7jf4d7ds', 'template_71ic2sb', form.current, 'olHe_8OiBJgBFKaMN')
       .then((result) => {
-        alert('message sended')
-      }, (error) => {
-alert('oops there is a problem , try again')      });
+     console.log(result)
+    setStatus('SUCCESS');
+    SetFname('') ;
+    SetLname('')
+    SetEmail('')
+    SetMessage('')
+    }, (error) => {
+alert('oops there is a problem , try again',error)      });
   };
+  useEffect(() => {
+    if(status === 'SUCCESS') {
+      setTimeout(() => {
+        setStatus('');
 
+      }, 3000);
+    }
+  }, [status]);
 
 
   return (
     
-    <motion.div  initial={{ opacity:0,y:300 }} 
+    <motion.div  initial={{ opacity:0,y:80 }} 
     animate={{opacity:1,y:0}} 
-    exit={{ opacity:0,y:-300}}
-    transition={{ duration: 1,type:"spring" ,ease:"easeInOut" }} 
+    exit={{ opacity:0,y:-80}}
+    transition={{ duration: 0.5,ease:"linear" }} 
       className="contact">
+           {status&&renderAlert()}
       <div className="contactcontainer">
         <div className="left">
           <div className="form-wrapper">
@@ -70,34 +85,30 @@ alert('oops there is a problem , try again')      });
             </div>
             <form ref={form} onSubmit={sendEmail} className="contact-form">
               <div className={!focus1 ? "input-wrap" : "input-wrap focus"}>
-                <input onKeyUp={Firstname} className='contact-input' onFocus={toggle1} onBlur={toggle1} autocomplete="off" name="user_name" type="text" required />
+                <input value={fname} onChange={Firstname} className='contact-input' onFocus={toggle1} onBlur={toggle1} autoComplete="off" name="user_name" type="text" required />
                 <label className={fname !== '' ? "not-empty" : null} >First Name</label>
               </div>
               <div className={!focus2 ? "input-wrap" : "input-wrap focus"}>
-                <input className='contact-input' onKeyUp={Lastname} onFocus={toggle2} onBlur={toggle2} autocomplete="off" name="user_last_name" type="text" required />
+                <input value={lname} className='contact-input' onChange={Lastname} onFocus={toggle2} onBlur={toggle2} autoComplete="off" name="user_last_name" type="text" required />
                 <label className={lname !== '' ? "not-empty" : null}>last Name</label>
               </div>
               <div className={!focus3 ? "input-wrap w-100" : "input-wrap w-100 focus"}>
-                <input className='contact-input' onKeyUp={Email} onFocus={toggle3} onBlur={toggle3} autocomplete="off" name="user_email"
-                  type="email" required />
+                <input  className='contact-input' onChange={Email} onFocus={toggle3} onBlur={toggle3} autoComplete="off" name="user_email"
+                  type="email" value={email} required />
                 <label className={email !== '' ? "not-empty" : null}>Email</label>
               </div>
               <div className={!focus4 ? "input-wrap textarea w-100" : "input-wrap textarea w-100 focus"}>
-                <textarea onFocus={toggle4} onKeyUp={Message} onBlur={toggle4} className='contact-input' name="message" auto-complete="off"
+                <textarea value={message} onFocus={toggle4} onChange={Message} onBlur={toggle4} className='contact-input' name="message" auto-complete="off"
                   required></textarea>
                 <label className={message !== '' ? "not-empty" : null}>Message</label>
               </div>
               <div className='contact-buttons'>
-                <button className='btn upload'>
-                  <span>
-                    <i></i> add attachment
-                  </span>
-                  <input type='file' name='attachment' />
-                </button>
-                <div onClick={{ scale: 1 }} className='btn'>
+              
+                <motion.div     whileTap={{ scale: 0.9 }}
+ className='btn'>
                   <input type="submit" value="Send" />
                   <span></span>
-                </div>
+                </motion.div>
               </div>
             </form>
             <svg className='dashed-wave' viewBox="0 0 345 877" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -112,7 +123,7 @@ alert('oops there is a problem , try again')      });
 
         <div className="right">
           <div className='image-wrapper'>
-            <iframe title='map' className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64393.90416583071!2d10.13868373038761!3d36.810314227677154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd347621688e13%3A0x4377d30c058ed4d3!2sRue%20Des%20Djerbiens%2C%20Tunis!5e0!3m2!1sfr!2stn!4v1677325752990!5m2!1sfr!2stn" style={{ border: "0" }} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe title='map' className='map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d64393.90416583071!2d10.13868373038761!3d36.810314227677154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd347621688e13%3A0x4377d30c058ed4d3!2sRue%20Des%20Djerbiens%2C%20Tunis!5e0!3m2!1sfr!2stn!4v1677325752990!5m2!1sfr!2stn" style={{ border: "0" }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
           </div>
           <div className="wave-wrap">
 
@@ -127,11 +138,16 @@ alert('oops there is a problem , try again')      });
         </div>
       </div>
 
-
+<ContactBar/>
     </motion.div>
    
 
   )
 }
+const renderAlert = () => (
+  <div className="succses">
+    <p>your message submitted successfully</p>
+  </div>
+)
 
 export default Contact

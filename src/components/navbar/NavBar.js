@@ -6,7 +6,7 @@ function NavBar(props) {
   const switsh =()=>{ setTimeout(() => {
     props.Toggle()
   }, 100);}
-  console.log(props.ison)
+
   return (
 
     <div className="navbar">

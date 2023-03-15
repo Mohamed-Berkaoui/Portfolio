@@ -1,10 +1,12 @@
 import './ContactButton.css'
+import {motion} from'framer-motion'
+
 function ContactButton() {
   return (
     
-    <div className='bottoncontact' >
+    <motion.div whileTap={{ scale: 0.9 }} className='bottoncontact' >
     <span id='buttonspan'>Contact ME!</span>
-    <div className='liquid'></div> </div>
+    <div className='liquid'></div> </motion.div>
   )
 }
 

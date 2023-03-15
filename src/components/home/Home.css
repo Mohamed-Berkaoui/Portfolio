@@ -1,6 +1,7 @@
 .overlay {
   position: relative;
-  min-height: 100vh;
+ height: 100vh;
+ min-height:550px;
   width: 100%;
 background-color: var(--backcolor2);
   display: flex;
@@ -18,18 +19,40 @@ font-size: 18px;
   width: max-content;
   }
   .tiltcard{
-  position: relative;
-      left:64%;
+  position: absolute;
+  top: 35vh;
+transition: all 0.3s linear;
+      right: 5%;
       width: max-content;
       height: max-content;
     }
+    .tiltcard:hover{top: 25vh;
+    }
   .contactbutton{ 
     position: absolute;
-    top:65vh;
+    top:65%;
     left:20%;
     text-decoration: none;
 
   }
+  .cv{
+    position: absolute;
+    top:78%;
+    display: flex;
+    width: 150px;
+    height: 40px;
+    text-align: center;
+    left:20%;
+    color: rgb(212, 212, 212);
+    text-decoration: none;
+font-size: 0.85rem;
+    font-variant: small-caps;
+  }
+
+  .cv img{
+    width:   30%;
+  }
+  .cv h3 {top: -7px; position: relative;}
 
 .wavyanimation{
   position: absolute;
@@ -113,10 +136,10 @@ padding: 5%;
       
     }
     .contactbutton{
-      left: 50%;
-      transform: translateX(-50%);
-      top:70%;
+      left: 33%;
     }
+    .cv{
+    left: 33%;}
   
 
 
@@ -135,4 +158,44 @@ left: -350%;}
       
       top: -25%;
       left: -550%;}
-            }
+      .discreption{font-size: 0.7em;
+            }}
+
+
+            @media  (min-height: 1000px){
+              .tiltcard{
+            display: none;    
+                }
+                .hometext{top: 22%;}
+                .discreption{
+                  display: block;
+                  position: absolute;
+                  text-align: justify;
+                  font-size: 2em;
+            padding: 5%;   
+               top: 40%;
+                  height: max-content;
+                  z-index: 2000;
+                }
+                .discreption h4{
+                  font-size: 2.4rem;
+                  color: #474747;
+                  
+                }
+                .contactbutton{
+                  left: 38%;
+                  transform: translateX(-50%);
+                  top:70%;
+                }
+              .cv{left: 38%;}
+            
+            
+              .wavyanimation .wave::before,
+            .wavyanimation .wave::after{
+            width: 400%;
+            
+            top: -25%;
+            left: -350%;}
+                  }
+                  @media  (max-height: 600px){
+                    .hometext{top:20%}}

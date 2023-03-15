@@ -21,25 +21,25 @@ function About(props) {
 
       return (
     
-        <motion.div  initial={{ opacity:0,y:100 }} 
+        <motion.div  initial={{ opacity:0,y:70 }} 
         animate={{opacity:1,y:0}} 
-        exit={{ opacity:0,y:-300}}
-        transition={{ duration:0.7,type:"keyframes" ,ease:"easeInOut" }} >
+        exit={{ opacity:0,y:-80}}
+        transition={{ duration:0.5 ,ease:"linear" }} >
 {!props.res?(<div id='placeholder'><Menu/> <img src={img} alt=''/></div>):(
 
         <>
-            <AnimatePresence>
-{loading ?null: (
+            <AnimatePresence >
+{loading ?    <Tesst />
+: (
 
         <Placeholder/>
       ) }
       </AnimatePresence>
- <motion.div className='main-about' >
+ <motion.div className='main-about' style={{overflow:!loading?"hidden":null,height:!loading?"100vh":null}}>
 
           
 <ScrollToTop/>
 
-    <Tesst/>
 <Firstt/>
 
 <Third/>
