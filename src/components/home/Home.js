@@ -1,5 +1,5 @@
 import './Home.css'
-import { motion } from 'framer-motion'
+import { motion,} from 'framer-motion'
 import TiltCard from './tiltcard/TiltCard'
 import ContactButton from './contactbutton/ContactButton'
 import HomeText from './hometext/HomeText'
@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom'
 
 function Home(props) {
 
-
+ 
 
   const options = {
     y:501.2,
@@ -20,10 +20,11 @@ function Home(props) {
 
   return (
 
-    <motion.div   initial={{ opacity:0,y:100 }} 
+    <motion.div             
+    initial={{ opacity:0,y:300 }} 
     animate={{opacity:1,y:0}} 
-    exit={{ opacity:0,y:-100}}
-    transition={{ duration: 0.8,type:"spring" ,ease:"easeInOut" }} >
+    exit={{ opacity:0,y:-300}}
+    transition={{ duration: 1,type:"spring" ,ease:"easeInOut" }} >
         <div className="overlay">
           <div  className='wavyanimation'>
             <div className='wave'></div>
@@ -35,7 +36,7 @@ function Home(props) {
           </motion.div>
 
 
-          <motion.div initial={{ opacity:0,y:50 }} animate={{opacity:1,y:0}}  transition={{delay:1.5, duration: 0.5 }} className='discreption'>
+          <motion.div   initial={{ opacity:0,x:50 }} animate={{opacity:1,x:0}}  transition={{delay:1.2, duration: 0.5 }} className='discreption'>
            
            <p>I’m probably the most passionate Web Developer you will ever get to work with. 
              If you have a great project that needs some amazing skills, I’m your guy!
@@ -45,12 +46,12 @@ function Home(props) {
    <h4>CATCH A SIGHT <span>{">>"}</span> </h4></Link>
          </motion.div>
 
-          <motion.div initial={{ opacity:0,y:50 }} animate={{opacity:1,y:0}}  transition={{delay:1, duration: 0.5 }} className='tiltcard'>
+          <motion.div initial={{ opacity:0,x:50 }} animate={{opacity:1,x:0}}  transition={{delay:1.2, duration: 0.5 }} className='tiltcard'>
           <TiltCard ison={props.ison} options={options} /> 
           </motion.div>
           
-          <div className='contactbutton'><Link style={{textDecoration:'none'}} to={'/contact'}>
-          <ContactButton /></Link></div>
+          <motion.div initial={{ opacity:0,x:-50 }} animate={{opacity:1,x:0}}  transition={{delay:0.8, duration: 0.5 }} className='contactbutton'><Link style={{textDecoration:'none'}} to={'/contact'}>
+          <ContactButton /></Link></motion.div>
           <ContactBar/>
 
         </div>

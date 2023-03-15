@@ -1,5 +1,7 @@
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { motion } from 'framer-motion'
+import emailjs from '@emailjs/browser';
+
 import './contact.css'
 
 function Contact() {
@@ -15,27 +17,48 @@ function Contact() {
 
   const [fname, SetFname] = useState("")
 
-  const Firstname = (e) => { SetFname(e.target.value) }
+  const Firstname = (e) => {    e.preventDefault();
+    SetFname(e.target.value) }
 
   const [lname, SetLname] = useState("")
 
-  const Lastname = (e) => { SetLname(e.target.value) }
+  const Lastname = (e) => {    e.preventDefault();
+    SetLname(e.target.value) }
 
   const [email, SetEmail] = useState("")
 
-  const Email = (e) => { SetEmail(e.target.value) }
+  const Email = (e) => {     e.preventDefault();
+    SetEmail(e.target.value) }
 
   const [message, SetMessage] = useState("")
 
-  const Message = (e) => { SetMessage(e.target.value) }
+  const Message = (e) => {     e.preventDefault();
+    SetMessage(e.target.value) }
+
+
+
+
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_b7jf4d7ds', 'template_71ic2sb', form.current, 'olHe_8OiBJgBFKaMN')
+      .then((result) => {
+        alert('message sended')
+      }, (error) => {
+alert('oops there is a problem , try again')      });
+  };
+
 
 
   return (
     
-    <motion.div  initial={{ opacity:0,y:100 }} 
+    <motion.div  initial={{ opacity:0,y:300 }} 
     animate={{opacity:1,y:0}} 
-    exit={{ opacity:0,y:-100}}
-    transition={{ duration: 0.8,type:"spring" ,ease:"easeInOut" }} 
+    exit={{ opacity:0,y:-300}}
+    transition={{ duration: 1,type:"spring" ,ease:"easeInOut" }} 
       className="contact">
       <div className="contactcontainer">
         <div className="left">
@@ -45,24 +68,22 @@ function Contact() {
               <p className="text">0r reach me via : <a
                 href="mailto:">berkaouimed1@gmail.com</a></p>
             </div>
-            <form action="index.html" method="post" className="contact-form">
+            <form ref={form} onSubmit={sendEmail} className="contact-form">
               <div className={!focus1 ? "input-wrap" : "input-wrap focus"}>
-                <input onKeyUp={Firstname} className='contact-input' onFocus={toggle1} onBlur={toggle1} autocomplete="off" name="First
-                  Name" type="text" required />
+                <input onKeyUp={Firstname} className='contact-input' onFocus={toggle1} onBlur={toggle1} autocomplete="off" name="user_name" type="text" required />
                 <label className={fname !== '' ? "not-empty" : null} >First Name</label>
               </div>
               <div className={!focus2 ? "input-wrap" : "input-wrap focus"}>
-                <input className='contact-input' onKeyUp={Lastname} onFocus={toggle2} onBlur={toggle2} autocomplete="off" name="Last 
-                Name" type="text" required />
+                <input className='contact-input' onKeyUp={Lastname} onFocus={toggle2} onBlur={toggle2} autocomplete="off" name="user_last_name" type="text" required />
                 <label className={lname !== '' ? "not-empty" : null}>last Name</label>
               </div>
               <div className={!focus3 ? "input-wrap w-100" : "input-wrap w-100 focus"}>
-                <input className='contact-input' onKeyUp={Email} onFocus={toggle3} onBlur={toggle3} autocomplete="off" name="Email"
+                <input className='contact-input' onKeyUp={Email} onFocus={toggle3} onBlur={toggle3} autocomplete="off" name="user_email"
                   type="email" required />
                 <label className={email !== '' ? "not-empty" : null}>Email</label>
               </div>
               <div className={!focus4 ? "input-wrap textarea w-100" : "input-wrap textarea w-100 focus"}>
-                <textarea onFocus={toggle4} onKeyUp={Message} onBlur={toggle4} className='contact-input' name="Message" auto-complete="off"
+                <textarea onFocus={toggle4} onKeyUp={Message} onBlur={toggle4} className='contact-input' name="message" auto-complete="off"
                   required></textarea>
                 <label className={message !== '' ? "not-empty" : null}>Message</label>
               </div>
@@ -74,7 +95,7 @@ function Contact() {
                   <input type='file' name='attachment' />
                 </button>
                 <div onClick={{ scale: 1 }} className='btn'>
-                  <input type="submit" value="Send message" />
+                  <input type="submit" value="Send" />
                   <span></span>
                 </div>
               </div>

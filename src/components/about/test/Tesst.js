@@ -22,13 +22,13 @@ const [display,setDisplay]=useState('flex')
 
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-latest>100?setDisplay("none"):setDisplay("flex")  })
+latest>150?setDisplay("none"):setDisplay("flex")  })
 
 console.log(window.innerWidth)
-  const opacity = useTransform(scrollY, [0, 1], [1, 0]);
+  const opacity = useTransform(scrollY, [0,20], [1, 0]);
 
-  const scalee = useTransform(scrollY, [0, 1], [1,mobiledivice?1: 1.5]);
-  const y = useTransform(scrollY, [0, 1], [0,mobiledivice?0: 200]);
+  const scalee = useTransform(scrollY, [10,20], [1,mobiledivice?1: 1.3]);
+  const y = useTransform(scrollY, [0,20], [0,mobiledivice?100: 100]);
 
 
 
@@ -38,17 +38,14 @@ console.log(window.innerWidth)
         className="hero"
         ref={el}
         style={{
-          opacity: opacity,
-       
-           y: y,
-          display:display
+          opacity: opacity,display:display, scale:scalee,y:y
         }}
       >
 
 
 
         <motion.svg
-style={{ scale:scalee, display:display}}
+style={{ display:display,scale:1}}
 
           id="loader" data-name="Calque 1" xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 1445.67 1692.28"><motion.path
@@ -98,7 +95,7 @@ style={{ scale:scalee, display:display}}
       <motion.div
         className="blur-mask"
         style={{ 
-          opacity: opacity,y:y,
+          opacity: opacity,
          
           backdropFilter: 'blur(25px)',display:display
         }}

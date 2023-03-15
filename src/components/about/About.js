@@ -23,8 +23,8 @@ function About(props) {
     
         <motion.div  initial={{ opacity:0,y:100 }} 
         animate={{opacity:1,y:0}} 
-        exit={{ opacity:0,y:-100}}
-        transition={{ duration: 0.8,type:"spring" ,ease:"easeInOut" }} >
+        exit={{ opacity:0,y:-300}}
+        transition={{ duration:0.7,type:"keyframes" ,ease:"easeInOut" }} >
 {!props.res?(<div id='placeholder'><Menu/> <img src={img} alt=''/></div>):(
 
         <>

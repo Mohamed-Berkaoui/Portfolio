@@ -1,4 +1,4 @@
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react';
 import './Third.css'
 import what1 from '../../../assets/what1.png'
@@ -6,11 +6,19 @@ import what2 from '../../../assets/what2.png'
 import what3 from '../../../assets/what3.png'
 import lastback1 from '../../../assets/lastback4.png'
 import lastback2 from '../../../assets/lastback3.png'
+import lastback3 from '../../../assets/lastback2.png'
+
 import ContactBar from '../../contactbar/ContactBar';
 import frontimg from "../../../assets/front.png"
 import backimg from "../../../assets/back.png"
 
 function Second() {
+
+
+  const ref = useRef(null);
+  const isInView = useInView(ref);
+  console.log(isInView)
+
   const carouselRef = useRef(null)
   const { scrollYProgress } = useScroll({
     target: carouselRef,
@@ -23,7 +31,7 @@ function Second() {
 
   const whatido1 = useTransform(scrollYProgress, [0.34,0.344], [ -100,0])
   const whatido2 = useTransform(scrollYProgress, [0.34,0.344], [ 100,0])
-  const whatido3 = useTransform(scrollYProgress, [0.34,0.344], [ 0,1])
+  const whatido3 = useTransform(scrollYProgress, [0.34,0.344], [ 0,0.8])
 
 
   const scale1 = useTransform(scrollYProgress, [0.38,0.5], [ 1,0.5])
@@ -32,7 +40,11 @@ function Second() {
   const blur1 = useTransform(scrollYProgress, [0.38,0.53], [1,0.1])
   const blur2 = useTransform(scrollYProgress, [0.38,0.53,0.67], [0.1, 1,0.1])
   const blur3 = useTransform(scrollYProgress, [0.53,0.67], [0.1, 1])
-  const op = useTransform(scrollYProgress, [0.95,0.99], [0.2, 1])
+  const op = useTransform(scrollYProgress, [0.99,0.995], [0.1, 0.8])
+ const stars=useTransform(scrollYProgress, [0.99,0.995], [0, 0.8])
+  const xdev = useTransform(scrollYProgress, [0.99,0.991], ["-5vw", '0vw'])
+  const xdis = useTransform(scrollYProgress, [0.99,0.991], ["5vw", '0vw'])
+  const opdev = useTransform(scrollYProgress, [0.99,0.991], [0, 0.8])
 
 
   return (
@@ -79,12 +91,75 @@ function Second() {
           </motion.div>
         </div>
       </motion.div>
-
+   
 
       <motion.div ref={carouselRef} className='test'>
+      <motion.section style={{opacity:stars}}>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+     
+    </motion.section>
       <motion.img style={{opacity:op }} id="img1" src={lastback2} alt=""/>
       <motion.img  src={lastback1} alt=""/>
+      <motion.img  
+src={lastback3} id="astronaut" alt=""/>
 
+<h1 id='skills'>Skills</h1> 
+
+
+      <motion.div  class="skills"> 
+	<motion.div  style={{x:xdev,opacity:opdev}} >
+    
+  <li>
+		<h3>ADOBE PHOTOSHOP</h3><span class="barskills"><motion.span style={{width:isInView?'85%':'0',transitionDelay:"0s"}}  class="jquery"></motion.span></span>
+	</li>
+  <li>
+		<h3>ADOBE ILLISTRATOR</h3><span class="barskills"><motion.span style={{width:isInView?'70%':'0',transitionDelay:"0.1s"}}  class="jquery"></motion.span></span>
+	</li>
+  <li>
+		<h3>ADOBE XD</h3><span class="barskills"><motion.span style={{width:isInView?'60%':'0',transitionDelay:"0.2s"}}  class="jquery"></motion.span></span>
+	</li>
+  <li>
+		<h3>AFTER EFFECT</h3><span class="barskills"><motion.span style={{width:isInView?'70%':'0',transitionDelay:"0.3s"}}  class="jquery"></motion.span></span>
+	</li>
+  <li>
+		<h3>WORDPRESS</h3><span class="barskills"><motion.span style={{width:isInView?'75%':'0',transitionDelay:"0.4s"}}  class="jquery"></motion.span></span>
+	</li>
+
+ 
+
+
+  </motion.div>
+  
+  <motion.div  style={{x:xdis,opacity:opdev}} >
+
+	<li ref={ref}>
+		<h3>HTML/CSS</h3><span class="barskills"><motion.span style={{width:isInView?'87%':'0'}}  class="html"></motion.span ></span>
+	</li>
+
+	<li>
+		<h3>JAVASCRIPT</h3><span class="barskills"><motion.span style={{width:isInView?'85%':'0',transitionDelay:"0.1s"}}  class="javascript"></motion.span></span>
+	</li>
+
+	<li>
+		<h3>REACT-JS</h3><span class="barskills"><motion.span style={{width:isInView?'80%':'0',transitionDelay:"0.2s"}}  class="react"></motion.span></span>
+	</li>
+
+	<li>
+		<h3>JQUERY</h3><span class="barskills"><motion.span style={{width:isInView?'60%':'0',transitionDelay:"0.3s"}}   class="jquery"></motion.span ></span>
+	</li>
+  <li>
+		<h3>NODE-JS/EXPRESS-JS</h3><span class="barskills"><motion.span style={{width:isInView?'70%':'0',transitionDelay:"0.4s"}}  class="expressjs"></motion.span></span>
+	</li>
+ 
+ 
+  </motion.div>
+</motion.div>
 
 
 <ContactBar/>
@@ -97,67 +172,3 @@ function Second() {
 
 export default Second
 
-/*
-
-<h1><span>Archer</span> Vs <span>Saber</span></h1>
-<div class="gallery">
-  <img src="https://assets.codepen.io/1480814/archer.jpg" alt="Archer from Fate/Stay">
-  <img src="https://assets.codepen.io/1480814/saber.jpg" alt="Saber from Fate/Stay">
-</div>
-.gallery {
-  --z: 32px; 
-  --s: 360px; 
-  --g: 8px;   
-  
-  display: grid;
-  gap: var(--g);
-  width: calc(2*var(--s) + var(--g));
-  grid-auto-flow: column;
-}
-.gallery > img {
-  width: 0;
-  min-width: calc(100% + var(--z)/2);
-  height: var(--s);
-  object-fit: cover;
-  -webkit-mask: var(--mask);
-          mask: var(--mask);
-  cursor: pointer;
-  transition: .5s;
-}
-.gallery > img:hover {
-  width: calc(var(--s)/2);
-}
-.gallery > img:first-child {
-  place-self: start;
-  clip-path: polygon(calc(2*var(--z)) 0,100% 0,100% 100%,0 100%);
-  --mask: 
-    conic-gradient(from -135deg at right,#0000,#000 1deg 89deg,#0000 90deg) 
-      50%/100% calc(2*var(--z)) repeat-y;
-}
-.gallery > img:last-child {
-  place-self: end;
-  clip-path: polygon(0 0,100% 0,calc(100% - 2*var(--z)) 100%,0 100%);
-  --mask: 
-    conic-gradient(from   45deg at left ,#0000,#000 1deg 89deg,#0000 90deg) 
-      50% calc(50% - var(--z))/100% calc(2*var(--z)) repeat-y;
-}
-
-body {
-  margin: 0;
-  min-height: 100vh;
-  display: grid;
-  place-content: center;
-  background: #A8DBA8;
-}
-h1 {
-  text-align: center;
-  font-family: system-ui, sans-serif;
-  font-size: 3rem;
-  word-spacing: .8em;
-}
-h1 span:first-child {
-  color: #af3817;
-}
-h1 span:last-child {
-  color: #0b3fa1;
-}*/

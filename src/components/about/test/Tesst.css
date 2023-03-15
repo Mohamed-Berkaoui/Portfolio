@@ -18,7 +18,7 @@ top: 0;
    overflow: hidden;
    top: 0;
    left: 0;
-   transition: all 0.3s ease;
+   transition: all 0.2s ease;
    z-index: 10;}
 
   
@@ -26,13 +26,13 @@ top: 0;
 
 .aboutheadertext{
   
-  transition: all 0.3s ease;
+  
   font-size:4rem; 
   font-weight: 500;
   top: 28vh;  
  
   }
-  .aboutheadertext h2{   transition: all 0.3s ease;
+  .aboutheadertext h2{   transition: all 0.2s ease;
     
    color: transparent;
    -webkit-text-stroke-color: rgba(0, 0, 0, 0.616);
@@ -46,7 +46,7 @@ top: 0;
   
 
 
-    .hero svg{   transition: all 0.3s ease;
+    .hero svg{   transition: all 0.2s ease;
       position: relative;
       overflow: hidden !important;
 
@@ -62,7 +62,7 @@ top: 0;
   .blur-mask {   
 overflow: hidden;
     width: 100vw;
-    height: 120vh;
+    height: 140vh;
     bottom: 0;
     left: 0;
     position: fixed;

@@ -10,7 +10,7 @@ function Placeholder() {
       strings: ["LOADING..."],
       startDelay: 500,
 
-      typeSpeed: 200,
+      typeSpeed: 130,
     
       showCursor: false
     });
@@ -54,8 +54,8 @@ function Placeholder() {
 
           <h2 >Hi Again</h2>
 
-        </motion.div>
-        <span className='loadingtext' ref={el}></span>
+        </motion.div >
+        <motion.span initial={{opacity:1}}  animate={{opacity:0}} transition={{delay:2.4,duration:0.1}} className='loadingtext' ref={el}></motion.span>
 
       </motion.div>
       
@@ -64,3 +64,4 @@ function Placeholder() {
 }
 
 export default Placeholder
+
