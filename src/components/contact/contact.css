@@ -1,3 +1,12 @@
+.conatactme{
+      position: relative;
+    width: 100%;
+    overflow-y: hidden;
+    max-height: 100vh;
+    min-height: 550px;
+
+
+}
 .contact {
     position: relative;
     width: 100%;
