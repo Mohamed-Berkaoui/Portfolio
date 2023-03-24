@@ -29,11 +29,7 @@ console.log(window.innerWidth)
 
   const scalee = useTransform(scrollY, [10,20], [1,mobiledivice?1: 1.8]);
   const y = useTransform(scrollY, [0,20], [0,mobiledivice?100: 200]);
-  const [loading, setLoading] = useState(false);
-  
-  setTimeout(() => {
-    setLoading(true);
-  }, 4000);
+
 
 
   return (
@@ -98,7 +94,7 @@ style={{ display:display,scale:1}}
       </motion.div>
       <motion.div
         className="blur-mask"
-        style={{  height:!loading?'100vh':'140vh',
+        style={{  
           opacity: opacity,
          
           backdropFilter: 'blur(25px)',display:display
