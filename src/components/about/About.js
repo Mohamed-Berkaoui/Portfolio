@@ -5,9 +5,8 @@ import Tesst from './test/Tesst'
 import Firstt from './first/Firstt'
 import {  useState } from 'react'
 import Placeholder from './test/placeholder/Placeholder'
-import img from '../../assets/12.png'
 import ScrollToTop from './scrolltotop/Scrolltotop'
-function About(props) {
+function About() {
 
 
 
