@@ -4,7 +4,7 @@ import Third from './third/Third'
 import Tesst from './test/Tesst'
 import Firstt from './first/Firstt'
 import {  useState } from 'react'
-import Placeholder from './test/placeholder/Placeholder'
+import Placeholder from './test/placeholder/Placeholder.js'
 import img from '../../assets/12.png'
 import ScrollToTop from './scrolltotop/Scrolltotop'
 import Menu from './test/Menu'
@@ -29,7 +29,7 @@ function About(props) {
 
         <>
            
-{!loading&&  <AnimatePresence ><Placeholder/></AnimatePresence>
+{!loading&&  <Placeholder/>
        }
       
  <motion.div className='main-about' style={{overflow:!loading?"hidden":null,height:!loading?"100vh":null}}>
