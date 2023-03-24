@@ -30,10 +30,10 @@ function About(props) {
         <>
             <AnimatePresence >
 {loading ?    <Tesst />
-: (
+: 
 
         <Placeholder/>
-      ) }
+     }
       </AnimatePresence>
  <motion.div className='main-about' style={{overflow:!loading?"hidden":null,height:!loading?"100vh":null}}>
 
