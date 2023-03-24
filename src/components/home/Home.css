@@ -20,14 +20,13 @@ font-size: 18px;
   }
   .tiltcard{
   position: absolute;
-  top: 35vh;
+ 
 transition: all 0.3s linear;
-      right: 5%;
+      left: 62%;
       width: max-content;
       height: max-content;
     }
-    .tiltcard:hover{top: 25vh;
-    }
+    
   .contactbutton{ 
     position: absolute;
     top:65%;
@@ -136,10 +135,12 @@ padding: 5%;
       
     }
     .contactbutton{
-      left: 33%;
+      left: 50%;
+      transform: translate(-50%);
     }
     .cv{
-    left: 33%;}
+      left: 50%;
+      transform: translate(-50%);}
   
 
 
