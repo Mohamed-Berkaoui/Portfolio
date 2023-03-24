@@ -1,13 +1,12 @@
-import {  motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import './About.css'
 import Third from './third/Third'
 import Tesst from './test/Tesst'
 import Firstt from './first/Firstt'
 import {  useState } from 'react'
-import Placeholder from './test/placeholder/Placeholder.js'
+import Placeholder from './test/placeholder/Placeholder'
 import img from '../../assets/12.png'
 import ScrollToTop from './scrolltotop/Scrolltotop'
-import Menu from './test/Menu'
 function About(props) {
 
 
@@ -25,11 +24,8 @@ function About(props) {
         animate={{opacity:1,y:0}} 
         exit={{ opacity:0,y:-80}}
         transition={{ duration:0.5 ,ease:"linear" }} >
-{!props.res?(<div id='placeholder'><Menu/> <img src={img} alt=''/></div>):(
-
-        <>
-           
-{!loading&&  <Placeholder/>
+   
+{!loading&&  <AnimatePresence ><Placeholder/></AnimatePresence>
        }
       
  <motion.div className='main-about' style={{overflow:!loading?"hidden":null,height:!loading?"100vh":null}}>
@@ -44,8 +40,7 @@ function About(props) {
 
 
 
-            </motion.div></>
-       )}
+            </motion.div>
        </motion.div>)
 }
 
