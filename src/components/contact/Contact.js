@@ -81,9 +81,9 @@ alert('oops there is a problem , try again',error)      });
             <div className="contact-heading">
               <h1>Let's work together<span>.</span></h1>
               <p className="text">0r reach me via : <a
-                href="mailto:">berkaouimed1@gmail.com</a></p>
+                href="mailto:">berkaouimedev@gmail.com</a></p>
             </div>
-            <form ref={form} onSubmit={sendEmail} className="contact-form">
+            <motion.form initial={{ opacity:0,y:50 }} animate={{opacity:1,y:0}}  transition={{delay:0.4, duration: 0.5 }} ref={form} onSubmit={sendEmail} className="contact-form">
               <div className={!focus1 ? "input-wrap" : "input-wrap focus"}>
                 <input value={fname} onChange={Firstname} className='contact-input' onFocus={toggle1} onBlur={toggle1} autoComplete="off" name="user_name" type="text" required />
                 <label className={fname !== '' ? "not-empty" : null} >First Name</label>
@@ -110,7 +110,7 @@ alert('oops there is a problem , try again',error)      });
                   <span></span>
                 </motion.div>
               </div>
-            </form>
+            </motion.form>
             <svg className='dashed-wave' viewBox="0 0 345 877" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path id="dashed-wave" d="M297.64,0,223.23,210.47,148.82,420.94,74.41,631.42,0,841.89H595.28l8.38-204.6L612,432.68q.24-5.87.24-11.74T612,409.21L603.66,204.6,595.28,0H297.64Z" />
           </svg>
