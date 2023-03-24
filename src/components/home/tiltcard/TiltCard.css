@@ -5,32 +5,37 @@
  
  
         box-shadow: 1px 8px 32px rgba(0, 0, 0, 0.37);
+        top: 40vh;
+
      
         background: linear-gradient(135deg,rgba(255,255,255,0.1),rgba(255,255,255,0));
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     
-      position: relative;
+      position: absolute;
         display: flex;
         flex-direction: column;
         align-items: center;
     justify-content: center;	;
+        transition: all 0.3s ease-out;
     perspective: 1000px;
-    border:1px solid #ffffffaf;
+    border:1px solid #fff;
     box-shadow:
-    inset 0 0 50px #ffffff62,
-    inset 20px 0 80px rgba(255, 172, 255, 0.384),
-    inset -20px 0 40px rgba(193, 255, 255, 0.411),
+    inset 0 0 50px #fff,
+    inset 20px 0 80px rgba(255, 241, 255, 0.226),
+    inset -20px 0 40px rgba(238, 255, 255, 0.137),
 
     0 0 30px #ffffffbd,
-    -10px 0 40px rgba(255, 153, 255, 0.26),
-    10px 0 40px rgba(70, 90, 90, 0.267);
+    -10px 0 40px rgba(255, 0, 255, 0.26),
+    10px 0 40px rgba(0, 255, 255, 0.267);
    
 }
 
 .aboutme:hover{
-    height:400px;
+    height:380px;
 
-    
+
+    top:23vh;
 
 }
 .aboutme .mylogo {
@@ -39,10 +44,11 @@ display: flex;
 justify-content: center;
 padding:5px 30px ;
 top: -35%;
-transition: all 0.6s ease;
+transition: all 0.5s ease;
 }
 .aboutme:hover .mylogo {
     top:18%;
+scale: 1.1;
 }
 .aboutme .mylogo img{
     width: 70%;
@@ -134,8 +140,8 @@ color: rgb(16, 103, 161);}
         height: 200px;}
 
         .aboutme:hover{
-            height:410px !important;
-            
+           
+            top:25vh;
 
         
         }
@@ -146,7 +152,7 @@ color: rgb(16, 103, 161);}
 
         .aboutme:hover{
             height:300px !important;
-          
+            top:25vh;
 
         
         }
