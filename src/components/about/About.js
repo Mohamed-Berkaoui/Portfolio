@@ -29,17 +29,14 @@ function About(props) {
 
         <>
             <AnimatePresence >
-{loading ?    <Tesst />
-: 
-
-        <Placeholder/>
-     }
+{! loading&&   <Placeholder/>
+       }
       </AnimatePresence>
  <motion.div className='main-about' style={{overflow:!loading?"hidden":null,height:!loading?"100vh":null}}>
 
           
 <ScrollToTop/>
-
+<Tesst/>
 <Firstt/>
 
 <Third/>
