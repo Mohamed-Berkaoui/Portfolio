@@ -28,8 +28,8 @@ function Second() {
     offset: ["start end", "end end"]
 
   })
-  const scale = useTransform(scrollYProgress, [0.73, 1], [1, window.innerWidth > 600 ? 0.3 : 0.7]);
-  const opacity = useTransform(scrollYProgress, [0.73, 0.99], [1, 0])
+  const scale = useTransform(scrollYProgress, [0.73, 0.97], [1, window.innerWidth > 600 ? 0.3 : 0.7]);
+  const opacity = useTransform(scrollYProgress, [0.73, 0.97], [1, 0])
   const x = useTransform(scrollYProgress, [0.38, 0.67], ['32%', '-135%'])
 
   const whatido1 = useTransform(scrollYProgress, [0.34, 0.344], [-100, 0])
@@ -43,11 +43,11 @@ function Second() {
   const blur1 = useTransform(scrollYProgress, [0.38, 0.53], [1, 0.1])
   const blur2 = useTransform(scrollYProgress, [0.38, 0.53, 0.67], [0.1, 1, 0.1])
   const blur3 = useTransform(scrollYProgress, [0.53, 0.67], [0.1, 1])
-  const op = useTransform(scrollYProgress, [0.97, 0.98], [0.3, 1])
-  const stars = useTransform(scrollYProgress, [0.97, 0.975], [0, 0.5])
-  const xdev = useTransform(scrollYProgress, [0.97, 0.971], ["-50vw", '0vw'])
-  const xdis = useTransform(scrollYProgress, [0.97, 0.971], ["50vw", '0vw'])
-  const opdev = useTransform(scrollYProgress, [0.97, 0.971], [0, 0.8])
+  const op = useTransform(scrollYProgress, [0.95, 0.96], [0.3, 1])
+  const stars = useTransform(scrollYProgress, [0.96, 0.965], [0, 0.5])
+  const xdev = useTransform(scrollYProgress, [0.96, 0.961], ["-5vw", '0vw'])
+  const xdis = useTransform(scrollYProgress, [0.96, 0.961], ["5vw", '0vw'])
+  const opdev = useTransform(scrollYProgress, [0.96, 0.961], [0, 0.8])
 
 
   return (
@@ -185,7 +185,7 @@ function Second() {
 
           </motion.div>
         </motion.div>
-<Link className='githublink' style={{textDecoration:'none' ,color:'#2187e7'}}><img src={github}alt=''/> SOME AWSOME WORKS HERE </Link>
+<Link to='https://github.com/BerkaouiMohamed' target="_blank" className='githublink' style={{textDecoration:'none' ,color:'#2187e7'}}ref={ref}><img src={github}alt=''/> SOME AWSOME WORKS HERE </Link>
         <ContactBar />
       </motion.div>
 
