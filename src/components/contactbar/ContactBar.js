@@ -30,7 +30,7 @@ function ContactBar() {
       top: -50,left:0,right:0,bottom:1}}  className='contactbar'> 
 
       <div className='socialmediabar'>
-<motion.div  onClick={    handleclic
+<motion.div  onMouseEnter={    handleclic
 }       style={{ cursor: mouseDown ? 'grabbing' : 'grab' }}
 onDrag ={handleMouseDown} 
    onDragEnd ={handleMouseUp}
