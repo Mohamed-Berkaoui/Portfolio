@@ -62,7 +62,6 @@ top: 0;
   .blur-mask {   
 overflow: hidden;
     width: 100vw;
-    height: 140vh;
     bottom: 0;
     left: 0;
     position: fixed;
