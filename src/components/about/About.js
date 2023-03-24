@@ -28,10 +28,10 @@ function About(props) {
 {!props.res?(<div id='placeholder'><Menu/> <img src={img} alt=''/></div>):(
 
         <>
-            <AnimatePresence >
-{! loading&&   <Placeholder/>
+           
+{!loading&&  <AnimatePresence ><Placeholder/></AnimatePresence>
        }
-      </AnimatePresence>
+      
  <motion.div className='main-about' style={{overflow:!loading?"hidden":null,height:!loading?"100vh":null}}>
 
           
