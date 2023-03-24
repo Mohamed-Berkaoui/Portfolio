@@ -68,7 +68,7 @@ alert('oops there is a problem , try again',error)      });
 
 
   return (
-    
+    <>
     <motion.div  initial={{ opacity:0,y:80 }} 
     animate={{opacity:1,y:0}} 
     exit={{ opacity:0,y:-80}}
@@ -138,9 +138,9 @@ alert('oops there is a problem , try again',error)      });
         </div>
       </div>
 
-<ContactBar/>
-    </motion.div>
-   
+
+    </motion.div><ContactBar/>
+   </>
 
   )
 }
