@@ -3,14 +3,14 @@
     height: 100vh;
 position: absolute;
     object-fit: cover;
-    background-color: rgb(180, 180, 180);
+    background-color: rgb(221, 221, 221);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
    top: 0;
    transition: all 0.1s ease;
-   z-index: 10000000000000000000000000000;}
+   z-index: 100000000000000000;}
    .herop svg{
     left: -100%;
     display: flex;
