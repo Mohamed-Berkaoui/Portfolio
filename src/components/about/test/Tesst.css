@@ -19,7 +19,7 @@ top: 0;
    top: 0;
    left: 0;
    transition: all 0.2s ease;
-   z-index: 50000;}
+   z-index: 10;}
 
   
   
@@ -62,12 +62,13 @@ top: 0;
   .blur-mask {   
 overflow: hidden;
     width: 100vw;
+    height: 140vh;
     bottom: 0;
     left: 0;
     position: fixed;
     right: 0;
     top: 0;
-    z-index: 5000;
+    z-index: 5;
     transition: all 0.2s ease;
    background-color: rgba(240, 248, 255, 0.11);
   }
