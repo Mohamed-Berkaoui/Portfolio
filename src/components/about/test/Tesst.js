@@ -14,16 +14,21 @@ const [display,setDisplay]=useState('flex')
 
 
   useMotionValueEvent(scrollY, "change", (latest) => {
-latest>150?setDisplay("none"):setDisplay("flex")  })
+latest>100?setDisplay("none"):setDisplay("flex")  })
 
-  const opacity = useTransform(scrollY, [0,70], [1, 0]);
+  const opacity = useTransform(scrollY, [0,1], [1, 0]);
 
-  const scalee = useTransform(scrollY, [0,70], [1, 1.8]);
-  const y = useTransform(scrollY, [0,70], [0,200]);
+  const scalee = useTransform(scrollY, [0,1], [1, 1.8]);
+  const y = useTransform(scrollY, [0,1], [0,200]);
 
-
+  const [loading, setLoading] = useState(false);
+  
+  setTimeout(() => {
+    setLoading(true);
+  }, 4000);
 
   return (
+    
     <div>
       <motion.div
         className="hero"
@@ -85,7 +90,7 @@ style={{ display:display,scale:scalee}}
       </motion.div>
       <motion.div
         className="blur-mask"
-        style={{ 
+        style={{  height:!loading?'100vh':'140vh',
           opacity: opacity,
          
           backdropFilter: 'blur(25px)',display:display
