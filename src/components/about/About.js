@@ -34,7 +34,7 @@ function About(props) {
         <Placeholder/>
       ) }
       </AnimatePresence>
- <motion.div className='main-about' className='main-about' style={{overflow:!loading?"hidden":null,height:!loading?"100vh":null}} >
+ <motion.div className='main-about'  style={{overflow:!loading?"hidden":null,height:!loading?"100vh":null}} >
 
           
 <ScrollToTop/>
