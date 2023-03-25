@@ -1,5 +1,7 @@
 import './Firstt.css'
 import arcade from "../../../assets/12.png"
+import arcadesmall from "../../../assets/12Recovered.png"
+
 import { motion, useScroll, useTransform, useMotionValueEvent, useInView } from 'framer-motion'
 import { useRef, useState } from 'react'
 import video from '../../../assets/video.mp4'
@@ -7,7 +9,7 @@ import video2 from '../../../assets/static-tv.gif'
 import mypic from "../../../assets/mypic.png"
 import devpic from "../../../assets/web.jpg"
 import correcticon from "../../../assets/correct.png"
-import { LazyLoadImage } from 'react-lazy-load-image-component';
+import ProgressiveImage from "react-progressive-graceful-image";
 
 import location from "../../../assets/location.png"
 import email from "../../../assets/email.png"
@@ -71,7 +73,11 @@ function Firstt() {
         <motion.div className='arcade'>
 
 
-          <motion.div style={{ scale: scale, opacity: opacity, rotate: rotate, y: y, display: display1 } }className="arcadeimg" ><LazyLoadImage src={arcade} alt='' id="arcadeimg" /></motion.div>
+          <motion.div style={{ scale: scale, opacity: opacity, rotate: rotate, y: y, display: display1 } }className="arcadeimg" >
+          <ProgressiveImage src={arcade} placeholder={arcadesmall}>
+  {(src) => <img src={src} alt="an" id="arcadeimg" />}
+</ProgressiveImage>
+            </motion.div>
           <motion.video src={video} style={{ opacity: display, rotate: rotatevdieo, scale: scalevideo, y: yvideo, display: display1 }} autoPlay={true} muted loop />
           <motion.img id='static' src={video2} style={{ opacity: display2, display: display1 }} />
 
