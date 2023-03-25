@@ -7,6 +7,7 @@ import video2 from '../../../assets/static-tv.gif'
 import mypic from "../../../assets/mypic.png"
 import devpic from "../../../assets/web.jpg"
 import correcticon from "../../../assets/correct.png"
+import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 import location from "../../../assets/location.png"
 import email from "../../../assets/email.png"
@@ -70,9 +71,9 @@ function Firstt() {
         <motion.div className='arcade'>
 
 
-          <motion.img loading="lazy" style={{ scale: scale, opacity: opacity, rotate: rotate, y: y, display: display1 }} src={arcade} id="arcadeimg" />
-          <motion.video loading="lazy" src={video} style={{ opacity: display, rotate: rotatevdieo, scale: scalevideo, y: yvideo, display: display1 }} autoPlay={true} muted loop />
-          <motion.img loading="lazy" id='static' src={video2} style={{ opacity: display2, display: display1 }} />
+          <motion.div style={{ scale: scale, opacity: opacity, rotate: rotate, y: y, display: display1 } }className="arcadeimg" ><LazyLoadImage src={arcade} alt='' id="arcadeimg" /></motion.div>
+          <motion.video src={video} style={{ opacity: display, rotate: rotatevdieo, scale: scalevideo, y: yvideo, display: display1 }} autoPlay={true} muted loop />
+          <motion.img id='static' src={video2} style={{ opacity: display2, display: display1 }} />
 
         </motion.div>
       </div>
@@ -341,7 +342,7 @@ AN ADAPTED SERVICE</li>
 
 </p> </div>
           <div className='info2'>
-            <motion.img initial={{ y: 300 }}
+            <motion.img initial={{ y:window.innerWidth>600? 300:100 }}
               whileInView={{ y: 0 }}
               viewport={{ once: true }} src={mypic} id='mypic' alt='' /></div>
         </motion.div>
