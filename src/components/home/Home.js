@@ -6,7 +6,7 @@ import HomeText from './hometext/HomeText'
 import ContactBar from '../contactbar/ContactBar'
 import { Link } from 'react-router-dom'
 import download from "../../assets/telecharger.png"
-
+import cv from '../../assets/cv.pdf'
 
 function Home(props) {
   
@@ -55,11 +55,11 @@ function Home(props) {
           <motion.div initial={{ opacity:0,x:-50 }} animate={{opacity:1,x:0}}  transition={{delay:0.8, duration: 0.5 }} className='contactbutton'><Link className='contactbutton' style={{textDecoration:'none'}} to={'/contact'}>
           <ContactButton /></Link></motion.div>
 
-          <Link className='cv' style={{textDecoration:'none'}} to={'https://drive.google.com/u/0/uc?id=1H75do9Ahxhutp0HipJQ2xTxFT-f_ra9Q&export=download'}>
+          <a href={cv} className='cv' style={{textDecoration:'none'}} download>
           <motion.div initial={{ opacity:0,x:-50 }} animate={{opacity:1,x:0}}  transition={{delay:0.8, duration: 0.5 }} >
           <img src={download} alt=""/>
           <h3 >download my C.V</h3>
-  </motion.div></Link>
+  </motion.div></a>
 
 
  
