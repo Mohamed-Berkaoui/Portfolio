@@ -70,9 +70,9 @@ function Firstt() {
         <motion.div className='arcade'>
 
 
-          <motion.img style={{ scale: scale, opacity: opacity, rotate: rotate, y: y, display: display1 }} src={arcade} id="arcadeimg" />
-          <motion.video src={video} style={{ opacity: display, rotate: rotatevdieo, scale: scalevideo, y: yvideo, display: display1 }} autoPlay={true} muted loop />
-          <motion.img id='static' src={video2} style={{ opacity: display2, display: display1 }} />
+          <motion.img loading="lazy" style={{ scale: scale, opacity: opacity, rotate: rotate, y: y, display: display1 }} src={arcade} id="arcadeimg" />
+          <motion.video loading="lazy" src={video} style={{ opacity: display, rotate: rotatevdieo, scale: scalevideo, y: yvideo, display: display1 }} autoPlay={true} muted loop />
+          <motion.img loading="lazy" id='static' src={video2} style={{ opacity: display2, display: display1 }} />
 
         </motion.div>
       </div>
