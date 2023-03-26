@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { Routes, Route, useLocation } from "react-router-dom"
 import { AnimatePresence } from 'framer-motion'
 import Contact from '../contact/Contact';
-
+import Works from './works'
 function Main() {
 
   const location = useLocation()
@@ -47,6 +47,8 @@ function Main() {
               <Routes  location={location} key={location.pathname} >
                 <Route  path='/' element={<Home />} />
                 <Route  path='/about' element={<About res={res} />} />
+                <Route  path='/works' element={<Works />} />
+
                 <Route  path='/contact' element={<Contact />} />
 
               </Routes>
