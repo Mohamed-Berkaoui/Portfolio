@@ -10,46 +10,23 @@
   text-align: center;
 }
 
-.wrapperwork  h1 {
+.wrapperwork h1 {
   font-size: 3rem;
   margin: 0;
   padding: 0;
-  animation: color-change 5s infinite;
+  color: #ff6699;
 }
 
-.wrapperwork  p {
+.wrapperwork p {
   font-size: 1.5rem;
 }
 
-@keyframes color-change {
-  0% {
-    color: #ff6699;
-  }
-  25% {
-    color: #cc33ff;
-  }
-  50% {
-    color: #3399ff;
-  }
-  75% {
-    color: #00ccff;
-  }
-  100% {
-    color: #ff6699;
-  }
-}
-
 @media (max-width: 768px) {
-  .wrapperwork  h1 {
+  .wrapperwork h1 {
     font-size: 2rem;
   }
 
- .wrapperwork  p {
+ .wrapperwork p {
     font-size: 1rem;
   }
 }
-
-
-
-
-
