@@ -5,7 +5,7 @@ const Works = () => {
  const containerVariants = {
     animate: {
       transition: {
-        duration:5,
+        duration:2,
         ease: 'easeInOut',
         repeat: Infinity,
         repeatType: 'mirror',
@@ -15,14 +15,14 @@ const Works = () => {
 
   const messageVariants = {
     initial: {
-      opacity: 0,
+     
       y: -20,
     },
     animate: {
-      opacity: 1,
+      
       y: 0,
       transition: {
-        duration: 2,
+        duration: 1,
         ease: 'easeInOut',
         repeat: Infinity,
         repeatType: 'mirror',
