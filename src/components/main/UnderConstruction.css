@@ -1,0 +1,55 @@
+.containerwork {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+}
+
+.wrapperwork {
+  text-align: center;
+}
+
+.wrapperwork  h1 {
+  font-size: 3rem;
+  margin: 0;
+  padding: 0;
+  animation: color-change 5s infinite;
+}
+
+.wrapperwork  p {
+  font-size: 1.5rem;
+}
+
+@keyframes color-change {
+  0% {
+    color: #ff6699;
+  }
+  25% {
+    color: #cc33ff;
+  }
+  50% {
+    color: #3399ff;
+  }
+  75% {
+    color: #00ccff;
+  }
+  100% {
+    color: #ff6699;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapperwork  h1 {
+    font-size: 2rem;
+  }
+
+ .wrapperwork  p {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+
