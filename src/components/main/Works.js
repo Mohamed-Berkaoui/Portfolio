@@ -2,8 +2,8 @@ import './UnderConstruction.css';
 
 const Works = () => {
   return (
-    <div className="container">
-      <div className="wrapper">
+    <div className="containerwork">
+      <div className="wrapperwork">
         <h1>This page is under construction</h1>
         <p>Please check back soon!</p>
       </div>
