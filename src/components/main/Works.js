@@ -5,7 +5,7 @@ const Works = () => {
  const containerVariants = {
     animate: {
       transition: {
-        duration:10,
+        duration:5,
         ease: 'easeInOut',
         repeat: Infinity,
         repeatType: 'mirror',
@@ -22,7 +22,7 @@ const Works = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 5,
+        duration: 2,
         ease: 'easeInOut',
         repeat: Infinity,
         repeatType: 'mirror',
