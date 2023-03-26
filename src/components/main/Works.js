@@ -5,7 +5,7 @@ const Works = () => {
  const containerVariants = {
     animate: {
       transition: {
-        duration: 2,
+        duration:10,
         ease: 'easeInOut',
         repeat: Infinity,
         repeatType: 'mirror',
