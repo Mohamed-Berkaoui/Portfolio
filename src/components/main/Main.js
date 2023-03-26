@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { Routes, Route, useLocation } from "react-router-dom"
 import { AnimatePresence } from 'framer-motion'
 import Contact from '../contact/Contact';
-import Works from './works'
+import Works from './Works'
 function Main() {
 
   const location = useLocation()
