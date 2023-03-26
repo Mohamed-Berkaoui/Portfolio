@@ -27,7 +27,7 @@ function NavMenu(props) {
 
   <li onClick={props.Toggle}>
            <Link to={'/works'}>
-              <p>Works<br/><span style={{fontSize:0.5em}}>[under construction]</span></p>
+              <p>Works<br/><span style={{fontSize:'0.5em'}}>[under construction]</span></p>
             </Link>
           </li>
         </ul>
