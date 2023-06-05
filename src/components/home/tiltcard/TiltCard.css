@@ -43,7 +43,7 @@
 display: flex;
 justify-content: center;
 padding:5px 30px ;
-top: -35%;
+top: -45%;
 transition: all 0.5s ease;
 }
 .aboutme:hover .mylogo {
