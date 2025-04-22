@@ -93,7 +93,7 @@ function Firstt() {
 
           Now I focus on people and learning how they interact with websites, making sure they can achieve their goals leaving them satisfied and more likely to return as customers.
         </motion.h1>
-        <motion.h1 style={{ fontSize: phonenumber, color: colortext }} id='phonenumber' >+216 22 495 056
+        <motion.h1 style={{ fontSize: phonenumber, color: colortext }} id='phonenumber' >+216 21 471 495
           <br /><br /><br /><br />It's all about passion</motion.h1>
       
 
