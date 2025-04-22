@@ -63,7 +63,7 @@ style={{display:display?"block":'none'}}
       </svg></Link>
 
 
-     <Link  className='logosociallink'   to={'https://www.linkedin.com/in/berkaoui-mohamed'} target="_blank"> 
+     <Link  className='logosociallink'   to={'https://www.linkedin.com/in/bermed'} target="_blank"> 
 <svg className='logosocial logosocial2' xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" >
 <motion.path    strokeWidth="1"
   stroke="rgba(0, 0, 0, 1)"
